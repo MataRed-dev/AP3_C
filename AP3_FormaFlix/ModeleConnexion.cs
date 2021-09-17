@@ -56,7 +56,7 @@ namespace AP3_FormaFlix
         public void seconnecter()
         {
             // paramètres de connexion à modifier selon sa BD et son serveur de BD
-            string myConnectionString = "Database=formaflix-demo;Data Source=192.168.139.1;User Id=formaflix-demo-2; Password=m3nGk8En;SslMode = none;";
+            string myConnectionString = "Database=bgs-corp;Data Source=192.168.139.1;User Id=bgs-corp-2; Password=VIP9K8UX;SslMode = none;";
             myConnection = new MySqlConnection(myConnectionString);
             try // tentative 
             {

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAjoutFormation));
             this.btnFermer = new System.Windows.Forms.Button();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,8 +40,8 @@
             this.cbVisible = new System.Windows.Forms.CheckBox();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.gbCompetences = new System.Windows.Forms.GroupBox();
-            this.cbCompetences = new System.Windows.Forms.ComboBox();
             this.lbCompetences = new System.Windows.Forms.ListBox();
+            this.cbCompetences = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbImage = new System.Windows.Forms.TextBox();
             this.gbCompetences.SuspendLayout();
@@ -175,6 +174,15 @@
             this.gbCompetences.TabStop = false;
             this.gbCompetences.Text = "Ajout des compétences";
             // 
+            // lbCompetences
+            // 
+            this.lbCompetences.FormattingEnabled = true;
+            this.lbCompetences.ItemHeight = 16;
+            this.lbCompetences.Location = new System.Drawing.Point(7, 73);
+            this.lbCompetences.Name = "lbCompetences";
+            this.lbCompetences.Size = new System.Drawing.Size(187, 116);
+            this.lbCompetences.TabIndex = 1;
+            // 
             // cbCompetences
             // 
             this.cbCompetences.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -184,15 +192,6 @@
             this.cbCompetences.Size = new System.Drawing.Size(188, 24);
             this.cbCompetences.TabIndex = 0;
             this.cbCompetences.SelectedIndexChanged += new System.EventHandler(this.CbCompetences_SelectedIndexChanged);
-            // 
-            // lbCompetences
-            // 
-            this.lbCompetences.FormattingEnabled = true;
-            this.lbCompetences.ItemHeight = 16;
-            this.lbCompetences.Location = new System.Drawing.Point(7, 73);
-            this.lbCompetences.Name = "lbCompetences";
-            this.lbCompetences.Size = new System.Drawing.Size(187, 116);
-            this.lbCompetences.TabIndex = 1;
             // 
             // label5
             // 
@@ -236,7 +235,6 @@
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.btnFermer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAjoutFormation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FORMA\'FLIX : Ajout d\'une formation";

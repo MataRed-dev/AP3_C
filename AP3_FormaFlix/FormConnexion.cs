@@ -20,12 +20,7 @@ namespace AP3_FormaFlix
         public FormConnexion()
         {
             InitializeComponent();
-        }
-
-       
-      
-        
-        
+        }        
 
         private void FormConnexion_Load(object sender, EventArgs e)
         {
@@ -42,16 +37,12 @@ namespace AP3_FormaFlix
                 // MessageBox.Show("BD connectée");
             }
         }
-
-
-
+               
         private void FormConnexion_FormClosed(object sender, FormClosedEventArgs e)
         {
             Controleur.VmodeleC.sedeconnecter();
             Application.Exit();
         }
-
-
 
         private void BtnConnecter_Click(object sender, EventArgs e)
         {
@@ -78,8 +69,7 @@ namespace AP3_FormaFlix
                         }
                         else
                             MessageBox.Show("ERREUR : Mot de passe incorrects");
-
-                    }
+                   }
                    else
                    {
                        MessageBox.Show("ERREUR : Nom incorrect");
@@ -87,7 +77,6 @@ namespace AP3_FormaFlix
                        tbLogin.Focus();
                    }
                }
-
            }
            else
                MessageBox.Show("ERREUR : Saisir un nom et un mot de passe");

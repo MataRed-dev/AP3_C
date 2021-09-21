@@ -49,9 +49,6 @@ namespace AP3_FormaFlix
                     dgvFormations.Visible = true;
                 }
 
-
-
-
             }
         }
 
@@ -101,6 +98,21 @@ namespace AP3_FormaFlix
         private void DgvFormations_SelectionChanged(object sender, EventArgs e)
         {
             gbCompetences.Visible = false;
+        }
+
+        private void btnsuppforma_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Supprimer une formation", "Voulez-vous vraiment supprimer cette formation ?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Controleur.initFormation();
+                // enregistrement de la question en lien avec le thème et niveau
+                if (Controleur.VmodeleF.SupprimerFormation(Convert.ToInt32(dgvFormations.CurrentRow.Cells[0].Value)))
+                {
+                    MessageBox.Show("Formation supprimée");
+                    FormListeFormations_Load(sender, e);
+                }
+                else MessageBox.Show("Formation non supprimée");
+            }
         }
     }
 }

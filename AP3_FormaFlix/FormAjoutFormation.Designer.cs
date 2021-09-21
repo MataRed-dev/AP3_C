@@ -44,6 +44,8 @@
             this.cbCompetences = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbImage = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtpdatepublication = new System.Windows.Forms.DateTimePicker();
             this.gbCompetences.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +54,7 @@
             this.btnFermer.BackColor = System.Drawing.Color.Black;
             this.btnFermer.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFermer.ForeColor = System.Drawing.Color.White;
-            this.btnFermer.Location = new System.Drawing.Point(312, 358);
+            this.btnFermer.Location = new System.Drawing.Point(313, 417);
             this.btnFermer.Name = "btnFermer";
             this.btnFermer.Size = new System.Drawing.Size(86, 41);
             this.btnFermer.TabIndex = 0;
@@ -65,7 +67,7 @@
             this.btnAjouter.BackColor = System.Drawing.Color.Black;
             this.btnAjouter.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjouter.ForeColor = System.Drawing.Color.White;
-            this.btnAjouter.Location = new System.Drawing.Point(83, 358);
+            this.btnAjouter.Location = new System.Drawing.Point(84, 417);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(86, 41);
             this.btnAjouter.TabIndex = 1;
@@ -154,7 +156,7 @@
             this.btnAnnuler.BackColor = System.Drawing.Color.Black;
             this.btnAnnuler.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnnuler.ForeColor = System.Drawing.Color.White;
-            this.btnAnnuler.Location = new System.Drawing.Point(197, 358);
+            this.btnAnnuler.Location = new System.Drawing.Point(198, 417);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(86, 41);
             this.btnAnnuler.TabIndex = 10;
@@ -212,14 +214,33 @@
             this.tbImage.Size = new System.Drawing.Size(183, 81);
             this.tbImage.TabIndex = 13;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(40, 358);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 16);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Date de publication";
+            // 
+            // dtpdatepublication
+            // 
+            this.dtpdatepublication.Location = new System.Drawing.Point(215, 358);
+            this.dtpdatepublication.Name = "dtpdatepublication";
+            this.dtpdatepublication.Size = new System.Drawing.Size(183, 20);
+            this.dtpdatepublication.TabIndex = 16;
+            // 
             // FormAjoutFormation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(807, 402);
+            this.ClientSize = new System.Drawing.Size(807, 479);
             this.ControlBox = false;
+            this.Controls.Add(this.dtpdatepublication);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.tbImage);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.gbCompetences);
@@ -263,5 +284,7 @@
         private System.Windows.Forms.ComboBox cbCompetences;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbImage;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dtpdatepublication;
     }
 }

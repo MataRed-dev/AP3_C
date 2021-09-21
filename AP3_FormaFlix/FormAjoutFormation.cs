@@ -92,7 +92,7 @@ namespace AP3_FormaFlix
             if (tbLibelle.Text != "" && tbVideo.Text != "")
             {
                 // enregistrement de la question en lien avec le thème et niveau
-                if (Controleur.VmodeleF.AjoutFormation(tbLibelle.Text, tbDescription.Text, tbVideo.Text, tbImage.Text, cbVisible.Checked))
+                if (Controleur.VmodeleF.AjoutFormation(tbLibelle.Text, tbDescription.Text, tbVideo.Text, tbImage.Text, cbVisible.Checked, dtpdatepublication.Value))
                 {
                     // recupérer l'IDFORMATION 
                     // récupération de la dernière formation ajoutée pour avoir son id

@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbCompetences = new System.Windows.Forms.ListBox();
             this.gbCompetences = new System.Windows.Forms.GroupBox();
+            this.btnsuppforma = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFormations)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.gbCompetences.SuspendLayout();
@@ -145,6 +146,19 @@
             this.gbCompetences.Text = "Liste des compétences";
             this.gbCompetences.Visible = false;
             // 
+            // btnsuppforma
+            // 
+            this.btnsuppforma.BackColor = System.Drawing.Color.Black;
+            this.btnsuppforma.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsuppforma.ForeColor = System.Drawing.Color.White;
+            this.btnsuppforma.Location = new System.Drawing.Point(374, 209);
+            this.btnsuppforma.Name = "btnsuppforma";
+            this.btnsuppforma.Size = new System.Drawing.Size(113, 39);
+            this.btnsuppforma.TabIndex = 8;
+            this.btnsuppforma.Text = "SUPPRIMER";
+            this.btnsuppforma.UseVisualStyleBackColor = false;
+            this.btnsuppforma.Click += new System.EventHandler(this.btnsuppforma_Click);
+            // 
             // FormListeFormations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,6 +167,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(880, 311);
             this.ControlBox = false;
+            this.Controls.Add(this.btnsuppforma);
             this.Controls.Add(this.gbCompetences);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnFermer);
@@ -181,5 +196,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox lbCompetences;
         private System.Windows.Forms.GroupBox gbCompetences;
+        private System.Windows.Forms.Button btnsuppforma;
     }
 }

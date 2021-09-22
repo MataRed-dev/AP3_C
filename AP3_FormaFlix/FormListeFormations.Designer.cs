@@ -40,6 +40,7 @@
             this.lbCompetences = new System.Windows.Forms.ListBox();
             this.gbCompetences = new System.Windows.Forms.GroupBox();
             this.btnsuppforma = new System.Windows.Forms.Button();
+            this.btnModifForma = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFormations)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.gbCompetences.SuspendLayout();
@@ -159,6 +160,19 @@
             this.btnsuppforma.UseVisualStyleBackColor = false;
             this.btnsuppforma.Click += new System.EventHandler(this.btnsuppforma_Click);
             // 
+            // btnModifForma
+            // 
+            this.btnModifForma.BackColor = System.Drawing.Color.Black;
+            this.btnModifForma.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifForma.ForeColor = System.Drawing.Color.White;
+            this.btnModifForma.Location = new System.Drawing.Point(238, 209);
+            this.btnModifForma.Name = "btnModifForma";
+            this.btnModifForma.Size = new System.Drawing.Size(113, 39);
+            this.btnModifForma.TabIndex = 9;
+            this.btnModifForma.Text = "MODIFIER";
+            this.btnModifForma.UseVisualStyleBackColor = false;
+            this.btnModifForma.Click += new System.EventHandler(this.btnModifForma_Click);
+            // 
             // FormListeFormations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,6 +181,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(880, 311);
             this.ControlBox = false;
+            this.Controls.Add(this.btnModifForma);
             this.Controls.Add(this.btnsuppforma);
             this.Controls.Add(this.gbCompetences);
             this.Controls.Add(this.label2);
@@ -197,5 +212,6 @@
         private System.Windows.Forms.ListBox lbCompetences;
         private System.Windows.Forms.GroupBox gbCompetences;
         private System.Windows.Forms.Button btnsuppforma;
+        private System.Windows.Forms.Button btnModifForma;
     }
 }

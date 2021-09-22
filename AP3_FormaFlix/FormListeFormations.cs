@@ -114,6 +114,11 @@ namespace AP3_FormaFlix
                 else MessageBox.Show("Formation non supprimée");
             }
         }
+
+        private void btnModifForma_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

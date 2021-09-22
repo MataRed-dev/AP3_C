@@ -86,6 +86,46 @@ namespace AP3_FormaFlix
         }
 
         /// <summary>
+        /// Permet de modifier une formation 
+        /// </summary>
+        /// <param name="idF"></param>
+        /// <param name="libelle"></param>
+        /// <param name="description"></param>
+        /// <param name="video"></param>
+        /// <param name="image"></param>
+        /// <param name="visible"></param>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        public bool ModifFormation(int idF, string libelle, string description, string video, string image, bool visible, DateTime date)
+        {
+            try
+            {
+                // préparation de la requête 
+                string requete = "UPDATE table SET LIBELLE = @lib, DESCRIPTION = @descr, IDENTIFIANTVIDEO = @v, VISIBILITEPUBLIC = @visible, DATEVISIBILITE = @date, IMAGE = @image WHERE IDFORMATION = @idF";
+                MySqlCommand command = Controleur.VmodeleC.MyConnection.CreateCommand();
+                command.CommandText = requete;
+
+                // mise à jour des paramètres de la requête préparée avec les infos passés en paramètre de la méthode
+                command.Parameters.AddWithValue("lib", libelle);
+                command.Parameters.AddWithValue("descr", description);
+                command.Parameters.AddWithValue("v", video);
+                command.Parameters.AddWithValue("visible", visible);
+                command.Parameters.AddWithValue("date", date);
+                command.Parameters.AddWithValue("image", image);
+                command.Parameters.AddWithValue("idF", idF);
+                // Exécution de la requête
+                int i = command.ExecuteNonQuery();
+
+                // i est positif si l'insertion a pu avoir lieu
+                return (i > 0);
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Permet de supprimer une formation
         /// </summary>
         /// <param name="id"></param>
@@ -144,5 +184,7 @@ namespace AP3_FormaFlix
                 return false;
             }
         }
+
+
     }
 }

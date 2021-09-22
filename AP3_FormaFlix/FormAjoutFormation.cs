@@ -134,9 +134,15 @@ namespace AP3_FormaFlix
             // à la sélection d'une compétence dna sla comboBox : on l'ajoute dans la listBox et la supprime de la combo
             if (index != -1)
             {
-                lbCompetences.Items.Add(cbCompetences.SelectedItem); // pour la lier à la formation dans la table DEVELOPPER lors de l'ajout
-                cbCompetences.Items.RemoveAt(index); // pour éviter les doublons
+                lbCompetences.Items.Add(cbCompetences.SelectedItem); 
+                cbCompetences.Items.RemoveAt(index); 
             }
+        }
+
+        private void lbCompetences_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cbCompetences.Items.Add(lbCompetences.SelectedItem); 
+            lbCompetences.Items.RemoveAt(lbCompetences.SelectedIndex); 
         }
     }
 }

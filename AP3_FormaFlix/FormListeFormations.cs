@@ -117,7 +117,8 @@ namespace AP3_FormaFlix
 
         private void btnModifForma_Click(object sender, EventArgs e)
         {
-
+            FormModifFormation FM = new FormModifFormation();
+            FM.Show();
         }
     }
 }

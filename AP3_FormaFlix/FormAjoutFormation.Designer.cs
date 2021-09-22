@@ -46,6 +46,7 @@
             this.tbImage = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dtpdatepublication = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
             this.gbCompetences.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -184,6 +185,7 @@
             this.lbCompetences.Name = "lbCompetences";
             this.lbCompetences.Size = new System.Drawing.Size(187, 116);
             this.lbCompetences.TabIndex = 1;
+            this.lbCompetences.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbCompetences_MouseDoubleClick);
             // 
             // cbCompetences
             // 
@@ -231,6 +233,16 @@
             this.dtpdatepublication.Size = new System.Drawing.Size(183, 20);
             this.dtpdatepublication.TabIndex = 16;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label7.Location = new System.Drawing.Point(500, 254);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(153, 26);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Pour enlever une compétence.\r\n       Double cliquer dessus.";
+            // 
             // FormAjoutFormation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,6 +251,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(807, 479);
             this.ControlBox = false;
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.dtpdatepublication);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbImage);
@@ -286,5 +299,6 @@
         private System.Windows.Forms.TextBox tbImage;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtpdatepublication;
+        private System.Windows.Forms.Label label7;
     }
 }

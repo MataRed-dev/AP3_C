@@ -8,7 +8,7 @@ namespace AP3_FormaFlix
 {
     /// <summary>
     /// Classe Controleur : AP3 FORMA'FLIX
-    /// Auteur : C.AUTRET
+    /// Auteur : M.GOUDAL
     /// date : Septembre 2021
     /// </summary>
     public static class Controleur

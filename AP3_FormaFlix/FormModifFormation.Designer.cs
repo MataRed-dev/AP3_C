@@ -46,6 +46,7 @@ namespace AP3_FormaFlix
             this.label1 = new System.Windows.Forms.Label();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.btnFermer = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.gbCompetences.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +84,7 @@ namespace AP3_FormaFlix
             this.lbCompetences.Name = "lbCompetences";
             this.lbCompetences.Size = new System.Drawing.Size(187, 116);
             this.lbCompetences.TabIndex = 1;
+            this.lbCompetences.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbCompetences_MouseDoubleClick);
             // 
             // cbCompetences
             // 
@@ -196,7 +198,7 @@ namespace AP3_FormaFlix
             this.btnAjouter.BackColor = System.Drawing.Color.Black;
             this.btnAjouter.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjouter.ForeColor = System.Drawing.Color.White;
-            this.btnAjouter.Location = new System.Drawing.Point(215, 393);
+            this.btnAjouter.Location = new System.Drawing.Point(239, 393);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(86, 41);
             this.btnAjouter.TabIndex = 18;
@@ -208,7 +210,7 @@ namespace AP3_FormaFlix
             this.btnFermer.BackColor = System.Drawing.Color.Black;
             this.btnFermer.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFermer.ForeColor = System.Drawing.Color.White;
-            this.btnFermer.Location = new System.Drawing.Point(329, 393);
+            this.btnFermer.Location = new System.Drawing.Point(353, 393);
             this.btnFermer.Name = "btnFermer";
             this.btnFermer.Size = new System.Drawing.Size(86, 41);
             this.btnFermer.TabIndex = 17;
@@ -216,11 +218,25 @@ namespace AP3_FormaFlix
             this.btnFermer.UseVisualStyleBackColor = false;
             this.btnFermer.Click += new System.EventHandler(this.btnFermer_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label7.Location = new System.Drawing.Point(545, 239);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(153, 26);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Pour enlever une compétence.\r\n       Double cliquer dessus.";
+            // 
             // FormModifFormation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(811, 483);
+            this.ControlBox = false;
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.dtpdatepublication);
             this.Controls.Add(this.tbImage);
             this.Controls.Add(this.label5);
@@ -236,7 +252,9 @@ namespace AP3_FormaFlix
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.btnFermer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormModifFormation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FORMA\'FLIX : Modification d\'une formation";
             this.Load += new System.EventHandler(this.FormModifFormation_Load);
             this.gbCompetences.ResumeLayout(false);
@@ -264,5 +282,6 @@ namespace AP3_FormaFlix
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.Button btnFermer;
+        private System.Windows.Forms.Label label7;
     }
 }

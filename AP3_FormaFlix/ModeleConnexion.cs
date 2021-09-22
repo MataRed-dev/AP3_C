@@ -18,7 +18,7 @@ namespace AP3_FormaFlix
     /// dT[2] : dataTable des competences selon une formation
     /// dT[3] : dataTable des competences
     /// dT[4] : dataTable des competences selon un libellé
-    /// Auteur : C.AUTRET
+    /// Auteur : M.GOUDAL
     /// date : Septembre 2021
     /// </summary>
     public class ModeleConnexion

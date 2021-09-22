@@ -102,7 +102,7 @@ namespace AP3_FormaFlix
 
         private void btnsuppforma_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Supprimer une formation", "Voulez-vous vraiment supprimer cette formation ?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Voulez-vous vraiment supprimer cette formation ?", "Supprimer une formation", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Controleur.initFormation();
                 // enregistrement de la question en lien avec le thème et niveau
@@ -117,7 +117,7 @@ namespace AP3_FormaFlix
 
         private void btnModifForma_Click(object sender, EventArgs e)
         {
-            FormModifFormation FM = new FormModifFormation();
+            FormModifFormation FM = new FormModifFormation(Convert.ToInt32(dgvFormations.CurrentRow.Index));
             FM.Show();
         }
     }

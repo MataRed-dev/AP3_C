@@ -101,7 +101,7 @@ namespace AP3_FormaFlix
                                 Controleur.VmodeleF.charger_CompetenceSelonLibelle(lbCompetences.Items[i].ToString());
                                 if (Controleur.VmodeleF.AjoutDevelopper(idF, Convert.ToInt32(Controleur.VmodeleC.DT[2].Rows[0][i])))
                                 {
-                                    MessageBox.Show("La formation a bien été modifiée et les compétences si vous les avez modifiés l'ont été aussi", "Modification");
+                                    MessageBox.Show("La formation a bien été modifiée et les compétences si vous les avez modifiés l'ont été aussi", "Modification fomration");
                                 }
                             }
                         }

@@ -95,6 +95,7 @@ namespace AP3_FormaFlix
 
 //Problème de retour booléen : comparé avec Clément.L exactement même code et même
 //contrainte sur base mais ne fonctionnne pas avec mon code alors qu'avec le sien si
+
                     if (Controleur.VmodeleF.SuppDevelopper(idF))
                     {
                         if (Controleur.VmodeleF.ModifFormation(idF, tbLibelle.Text, tbDescription.Text, tbVideo.Text, tbImage.Text, cbVisible.Checked, dtpdatepublication.Value))

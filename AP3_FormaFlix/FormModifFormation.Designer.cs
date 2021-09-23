@@ -94,6 +94,7 @@ namespace AP3_FormaFlix
             this.cbCompetences.Name = "cbCompetences";
             this.cbCompetences.Size = new System.Drawing.Size(188, 24);
             this.cbCompetences.TabIndex = 0;
+            this.cbCompetences.SelectedIndexChanged += new System.EventHandler(this.cbCompetences_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -204,6 +205,7 @@ namespace AP3_FormaFlix
             this.btnAjouter.TabIndex = 18;
             this.btnAjouter.Text = "MODIFIER";
             this.btnAjouter.UseVisualStyleBackColor = false;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // btnFermer
             // 

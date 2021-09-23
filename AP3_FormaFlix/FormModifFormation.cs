@@ -32,14 +32,12 @@ namespace AP3_FormaFlix
             {
                 for (int i = 0; i < Controleur.VmodeleC.DT[3].Rows.Count; i++)
                 {
-                    MessageBox.Show(Controleur.VmodeleC.DT[3].Rows[i]["LIBELLECOMPETENCE"].ToString());
                     if (!lbCompetences.Items.Contains(Controleur.VmodeleC.DT[3].Rows[i]["LIBELLECOMPETENCE"].ToString()))
                     {
                         cbCompetences.Items.Add(Controleur.VmodeleC.DT[3].Rows[i]["LIBELLECOMPETENCE"].ToString());
                     }
                 }
                 lbCompetences.Visible = true;
-                lbCompetences.Items.Clear();
             }
         }
 
@@ -49,7 +47,6 @@ namespace AP3_FormaFlix
             Controleur.initFormation();
             Controleur.VmodeleF.charger_Formations();
             Controleur.VmodeleF.charger_Competences();
-            chargerComboBoxCompetences();
 
             Controleur.VmodeleF.charger_CompetencesSelonFormation(Convert.ToInt32(Controleur.VmodeleC.DT[1].Rows[index][0]));
 
@@ -58,16 +55,19 @@ namespace AP3_FormaFlix
                 lbCompetences.Items.Add(Controleur.VmodeleC.DT[2].Rows[i][2].ToString());
             }
 
+            chargerComboBoxCompetences();
+
             //Information de la formation que l'on veut modifier mise dans les bon emplacement
 
             //TextBox Libele = valeur de la 2ème colonne de la ligne de valeur 'index'
             tbLibelle.Text = Controleur.VmodeleC.DT[1].Rows[index][1].ToString();
-
+            //Même chose pour en dessous
             tbDescription.Text = Controleur.VmodeleC.DT[1].Rows[index][2].ToString();
             tbVideo.Text = Controleur.VmodeleC.DT[1].Rows[index][3].ToString();
             tbImage.Text = Controleur.VmodeleC.DT[1].Rows[index][6].ToString();
-            if (Convert.ToInt32(Controleur.VmodeleC.DT[1].Rows[index][4]) == 1) { cbVisible.Checked = true; }
             dtpdatepublication.Value = Convert.ToDateTime(Controleur.VmodeleC.DT[1].Rows[index][5]);
+            //Pour le check box il faut faire une itérative
+            if (Convert.ToInt32(Controleur.VmodeleC.DT[1].Rows[index][4]) == 1) { cbVisible.Checked = true; }
 
         }
 
@@ -83,6 +83,50 @@ namespace AP3_FormaFlix
         {
             cbCompetences.Items.Add(lbCompetences.SelectedItem);
             lbCompetences.Items.RemoveAt(lbCompetences.SelectedIndex);
+        }
+
+        private void btnAjouter_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Voulez-vous vraiment modifier cette formation ?", "Fermez ?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                if (tbLibelle.Text != "" && tbVideo.Text != "")
+                {
+                    int idF = Convert.ToInt32(Controleur.VmodeleC.DT[1].Rows[index][0]);
+                    if (Controleur.VmodeleF.SuppDevelopper(idF))
+                    {
+                        if (Controleur.VmodeleF.ModifFormation(idF, tbLibelle.Text, tbDescription.Text, tbVideo.Text, tbImage.Text, cbVisible.Checked, dtpdatepublication.Value))
+                        {
+                            for (int i = 0; i < lbCompetences.Items.Count; i++)
+                            {
+                                Controleur.VmodeleF.charger_CompetenceSelonLibelle(lbCompetences.Items[i].ToString());
+                                if (Controleur.VmodeleF.AjoutDevelopper(idF, Convert.ToInt32(Controleur.VmodeleC.DT[2].Rows[0][i])))
+                                {
+                                    MessageBox.Show("La formation a bien été modifiée et les compétences si vous les avez modifiés l'ont été aussi", "Modification");
+                                }
+                            }
+                        }
+                        //à supprimer
+                        else MessageBox.Show("formation non modifiée");
+                    }
+                    else
+                    {
+                        //à supprimer
+                        MessageBox.Show("compétences non modifiée");
+                    }
+                }
+            }
+        }
+
+        private void cbCompetences_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = cbCompetences.SelectedIndex;
+
+            // à la sélection d'une compétence dna sla comboBox : on l'ajoute dans la listBox et la supprime de la combo
+            if (index != -1)
+            {
+                lbCompetences.Items.Add(cbCompetences.SelectedItem);
+                cbCompetences.Items.RemoveAt(index);
+            }
         }
     }
 }

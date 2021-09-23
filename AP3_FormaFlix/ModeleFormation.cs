@@ -185,6 +185,29 @@ namespace AP3_FormaFlix
             }
         }
 
+        public bool SuppDevelopper (int idF)
+        {
+            try
+            {
+                MessageBox.Show("identifiant formation : "+idF);
+                string requete = "delete from developper where IDFORMATION = @IDF)";
+                MySqlCommand command = Controleur.VmodeleC.MyConnection.CreateCommand();
+                command.CommandText = requete;
+
+                // mise à jour des paramètres de la requête préparée avec les infos passés en paramètre de la méthode
+                command.Parameters.AddWithValue("IDF", idF);
+
+                // Exécution de la requête
+                int i = command.ExecuteNonQuery();
+
+                // i est positif si l'insertion a pu avoir lieu
+                return (i > 0);
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
     }
 }

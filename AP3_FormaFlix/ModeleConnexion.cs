@@ -109,15 +109,10 @@ namespace AP3_FormaFlix
                 DT.Clear();
                 DT.Load(reader);
                 chargement = true;
-
                 /*   while (reader.Read())
-
                    {
-
                        //   StringID = reader[0].ToString();
-
                    }*/
-
             }
             catch (Exception err)
             {

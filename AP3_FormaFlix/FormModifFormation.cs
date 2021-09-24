@@ -85,42 +85,6 @@ namespace AP3_FormaFlix
             lbCompetences.Items.RemoveAt(lbCompetences.SelectedIndex);
         }
 
-        private void btnAjouter_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Voulez-vous vraiment modifier cette formation ?", "Fermez ?", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                if (tbLibelle.Text != "" && tbVideo.Text != "")
-                {
-                    int idF = Convert.ToInt32(Controleur.VmodeleC.DT[1].Rows[index][0]);
-
-//Problème de retour booléen : comparé avec Clément.L exactement même code et même
-//contrainte sur base mais ne fonctionnne pas avec mon code alors qu'avec le sien si
-
-                    if (Controleur.VmodeleF.SuppDevelopper(idF))
-                    {
-                        if (Controleur.VmodeleF.ModifFormation(idF, tbLibelle.Text, tbDescription.Text, tbVideo.Text, tbImage.Text, cbVisible.Checked, dtpdatepublication.Value))
-                        {
-                            for (int i = 0; i < lbCompetences.Items.Count; i++)
-                            {
-                                Controleur.VmodeleF.charger_CompetenceSelonLibelle(lbCompetences.Items[i].ToString());
-                                if (Controleur.VmodeleF.AjoutDevelopper(idF, Convert.ToInt32(Controleur.VmodeleC.DT[2].Rows[0][i])))
-                                {
-                                    MessageBox.Show("La formation a bien été modifiée et les compétences si vous les avez modifiés l'ont été aussi", "Modification fomration");
-                                }
-                            }
-                        }
-                        //à supprimer
-                        else MessageBox.Show("formation non modifiée");
-                    }
-                    else
-                    {
-                        //à supprimer
-                        MessageBox.Show("compétences non modifiée");
-                    }
-                }
-            }
-        }
-
         private void cbCompetences_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = cbCompetences.SelectedIndex;
@@ -130,6 +94,39 @@ namespace AP3_FormaFlix
             {
                 lbCompetences.Items.Add(cbCompetences.SelectedItem);
                 cbCompetences.Items.RemoveAt(index);
+            }
+        }
+
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Voulez-vous vraiment modifier cette formation ?", "Fermez ?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                if (tbLibelle.Text != "" && tbVideo.Text != "")
+                {
+                    int idF = Convert.ToInt32(Controleur.VmodeleC.DT[1].Rows[index][0]);
+
+                    //Problème de retour booléen : comparé avec Clément.L exactement même code et même
+                    //contrainte sur base mais ne fonctionnne pas avec mon code alors qu'avec le sien si
+
+                    if (Controleur.VmodeleF.SuppDevelopper(idF))
+                    {
+                        bool isCheck = false;
+                        if (cbVisible.Checked) isCheck = true;
+
+                        if (Controleur.VmodeleF.ModifFormation(idF, tbLibelle.Text, tbDescription.Text, tbVideo.Text, tbImage.Text, isCheck, dtpdatepublication.Value))
+                        {
+                            for (int i = 0; i <= lbCompetences.Items.Count; i++)
+                            {
+                                Controleur.VmodeleF.charger_CompetenceSelonLibelle(lbCompetences.Items[i].ToString());
+                                if (Controleur.VmodeleF.AjoutDevelopper(idF, Convert.ToInt32(Controleur.VmodeleC.DT[2].Rows[i][0])))
+                                {
+                                    MessageBox.Show("La formation a bien été modifiée et les compétences si vous les avez modifiés l'ont été aussi", "Modification fomration");
+                                }
+                            }
+                            this.Close();
+                        }
+                    }
+                }
             }
         }
     }

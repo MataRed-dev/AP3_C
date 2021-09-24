@@ -47,6 +47,7 @@ namespace AP3_FormaFlix
         /// <param name="libC">libellé de la compétence</param>
         public void charger_CompetenceSelonLibelle(string libC)
         {
+            Controleur.VmodeleC.DT[4].Clear();
             Controleur.VmodeleC.charger("select IDCOMPETENCE, LIBELLECOMPETENCE from competence  WHERE LIBELLECOMPETENCE = '" + libC + "';", Controleur.VmodeleC.DT[4]);
         }
         /// <summary>
@@ -101,7 +102,7 @@ namespace AP3_FormaFlix
             try
             {
                 // préparation de la requête 
-                string requete = "UPDATE table SET LIBELLE = @lib, DESCRIPTION = @descr, IDENTIFIANTVIDEO = @v, VISIBILITEPUBLIC = @visible, DATEVISIBILITE = @date, IMAGE = @image WHERE IDFORMATION = @idF";
+                string requete = "UPDATE formation SET LIBELLE = @lib, DESCRIPTION = @descr, IDENTIFIANTVIDEO = @v, VISIBILITEPUBLIC = @visible, DATEVISIBILITE = @date, IMAGE = @image WHERE IDFORMATION = @idF";
                 MySqlCommand command = Controleur.VmodeleC.MyConnection.CreateCommand();
                 command.CommandText = requete;
 
@@ -189,12 +190,12 @@ namespace AP3_FormaFlix
         {
             try
             {
-                string requete = "delete from developper where IDFORMATION = @IDF)";
+                string requete = "delete from developper where IDFORMATION = @IDF";
                 MySqlCommand command = Controleur.VmodeleC.MyConnection.CreateCommand();
                 command.CommandText = requete;
 
                 command.Parameters.AddWithValue("IDF", idF);
-
+                MessageBox.Show(idF.ToString());
                 int i = command.ExecuteNonQuery();
 
                 return (i > 0);

@@ -44,7 +44,7 @@ namespace AP3_FormaFlix
             this.label2 = new System.Windows.Forms.Label();
             this.tbLibelle = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAjouter = new System.Windows.Forms.Button();
+            this.btnModifier = new System.Windows.Forms.Button();
             this.btnFermer = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.gbCompetences.SuspendLayout();
@@ -194,18 +194,18 @@ namespace AP3_FormaFlix
             this.label1.TabIndex = 19;
             this.label1.Text = "Libellé de la formation";
             // 
-            // btnAjouter
+            // btnModifier
             // 
-            this.btnAjouter.BackColor = System.Drawing.Color.Black;
-            this.btnAjouter.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAjouter.ForeColor = System.Drawing.Color.White;
-            this.btnAjouter.Location = new System.Drawing.Point(239, 393);
-            this.btnAjouter.Name = "btnAjouter";
-            this.btnAjouter.Size = new System.Drawing.Size(86, 41);
-            this.btnAjouter.TabIndex = 18;
-            this.btnAjouter.Text = "MODIFIER";
-            this.btnAjouter.UseVisualStyleBackColor = false;
-            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
+            this.btnModifier.BackColor = System.Drawing.Color.Black;
+            this.btnModifier.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifier.ForeColor = System.Drawing.Color.White;
+            this.btnModifier.Location = new System.Drawing.Point(239, 393);
+            this.btnModifier.Name = "btnModifier";
+            this.btnModifier.Size = new System.Drawing.Size(86, 41);
+            this.btnModifier.TabIndex = 18;
+            this.btnModifier.Text = "MODIFIER";
+            this.btnModifier.UseVisualStyleBackColor = false;
+            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
             // 
             // btnFermer
             // 
@@ -252,7 +252,7 @@ namespace AP3_FormaFlix
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbLibelle);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnAjouter);
+            this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.btnFermer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormModifFormation";
@@ -282,7 +282,7 @@ namespace AP3_FormaFlix
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbLibelle;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAjouter;
+        private System.Windows.Forms.Button btnModifier;
         private System.Windows.Forms.Button btnFermer;
         private System.Windows.Forms.Label label7;
     }

@@ -115,17 +115,25 @@ namespace AP3_FormaFlix
 
                         if (Controleur.VmodeleF.ModifFormation(idF, tbLibelle.Text, tbDescription.Text, tbVideo.Text, tbImage.Text, isCheck, dtpdatepublication.Value))
                         {
-                            for (int i = 0; i <= lbCompetences.Items.Count; i++)
-                            {
+
+                            int idC = 0;
+                            for (int i = 0; i < lbCompetences.Items.Count; i++)
+                            {   
                                 Controleur.VmodeleF.charger_CompetenceSelonLibelle(lbCompetences.Items[i].ToString());
-                                if (Controleur.VmodeleF.AjoutDevelopper(idF, Convert.ToInt32(Controleur.VmodeleC.DT[2].Rows[i][0])))
+                                if (Controleur.VmodeleC.DT[4].Rows.Count != 0)
                                 {
-                                    MessageBox.Show("La formation a bien été modifiée et les compétences si vous les avez modifiés l'ont été aussi", "Modification fomration");
+                                    idC = Convert.ToInt32(Controleur.VmodeleC.DT[4].Rows[0]["IDCOMPETENCE"]);
+                                    // ajouter dans la table DEVELOPPER les compétences pour la formation
+                                    if (Controleur.VmodeleF.AjoutDevelopper(idF, idC))
+                                    {
+                                        MessageBox.Show("Lien Formation-Competence ajouté pour la compétence " + Controleur.VmodeleC.DT[4].Rows[0]["LIBELLECOMPETENCE"]);
+                                    }
                                 }
                             }
                             this.Close();
                         }
                     }
+                    else MessageBox.Show("Problème d'ajout");
                 }
             }
         }

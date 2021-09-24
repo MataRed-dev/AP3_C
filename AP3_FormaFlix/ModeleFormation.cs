@@ -195,7 +195,6 @@ namespace AP3_FormaFlix
                 command.CommandText = requete;
 
                 command.Parameters.AddWithValue("IDF", idF);
-                MessageBox.Show(idF.ToString());
                 int i = command.ExecuteNonQuery();
 
                 return (i > 0);

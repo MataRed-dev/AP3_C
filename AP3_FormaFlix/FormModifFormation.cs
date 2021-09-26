@@ -111,7 +111,7 @@ namespace AP3_FormaFlix
                     if (Controleur.VmodeleF.SuppDevelopper(idF))
                     {
                         bool isCheck = false;
-                        if (cbVisible.Checked) isCheck = true;
+                        if (cbVisible.Checked) isCheck = true; 
 
                         if (Controleur.VmodeleF.ModifFormation(idF, tbLibelle.Text, tbDescription.Text, tbVideo.Text, tbImage.Text, isCheck, dtpdatepublication.Value))
                         {
@@ -124,10 +124,7 @@ namespace AP3_FormaFlix
                                 {
                                     idC = Convert.ToInt32(Controleur.VmodeleC.DT[4].Rows[0]["IDCOMPETENCE"]);
                                     // ajouter dans la table DEVELOPPER les compétences pour la formation
-                                    if (Controleur.VmodeleF.AjoutDevelopper(idF, idC))
-                                    {
-                                        MessageBox.Show("Lien Formation-Competence ajouté pour la compétence " + Controleur.VmodeleC.DT[4].Rows[0]["LIBELLECOMPETENCE"]);
-                                    }
+                                    Controleur.VmodeleF.AjoutDevelopper(idF, idC);
                                 }
                             }
                             this.Close();

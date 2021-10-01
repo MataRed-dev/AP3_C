@@ -254,7 +254,7 @@ namespace AP3_FormaFlix
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.btnFermer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormModifFormation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FORMA\'FLIX : Modification d\'une formation";

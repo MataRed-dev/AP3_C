@@ -69,7 +69,8 @@ namespace AP3_FormaFlix
 
         private void gestionDesCommentairesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormGestionCommentaire FGC = new FormGestionCommentaire();
+            FGC.Show();
         }
     }
 }

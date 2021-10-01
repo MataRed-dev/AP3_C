@@ -110,10 +110,7 @@ namespace AP3_FormaFlix
                         {
                             idC = Convert.ToInt32(Controleur.VmodeleC.DT[4].Rows[0]["IDCOMPETENCE"]);
                             // ajouter dans la table DEVELOPPER les compétences pour la formation
-                            if (Controleur.VmodeleF.AjoutDevelopper(idF, idC))
-                            {
-                                MessageBox.Show("Lien Formation-Competence ajouté pour la compétence " + Controleur.VmodeleC.DT[4].Rows[0]["LIBELLECOMPETENCE"]);
-                            }
+                            Controleur.VmodeleF.AjoutDevelopper(idF, idC);
                         }
 
                     }

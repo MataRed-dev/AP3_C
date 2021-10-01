@@ -66,5 +66,10 @@ namespace AP3_FormaFlix
             FormAjoutFormation FA = new FormAjoutFormation();
             FA.Show();
         }
+
+        private void gestionDesCommentairesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

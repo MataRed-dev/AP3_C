@@ -36,6 +36,7 @@
             this.listerToutesLesFormationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterUneFormationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionDesCommentairesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.connexionToolStripMenuItem,
             this.gestionDesFormationsToolStripMenuItem,
+            this.gestionDesCommentairesToolStripMenuItem,
             this.quitterToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -86,14 +88,14 @@
             // listerToutesLesFormationsToolStripMenuItem
             // 
             this.listerToutesLesFormationsToolStripMenuItem.Name = "listerToutesLesFormationsToolStripMenuItem";
-            this.listerToutesLesFormationsToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.listerToutesLesFormationsToolStripMenuItem.Text = "Lister toutes les formations";
+            this.listerToutesLesFormationsToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.listerToutesLesFormationsToolStripMenuItem.Text = "Lister / Modifier / Supprimer formations";
             this.listerToutesLesFormationsToolStripMenuItem.Click += new System.EventHandler(this.ListerToutesLesFormationsToolStripMenuItem_Click);
             // 
             // ajouterUneFormationToolStripMenuItem
             // 
             this.ajouterUneFormationToolStripMenuItem.Name = "ajouterUneFormationToolStripMenuItem";
-            this.ajouterUneFormationToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.ajouterUneFormationToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.ajouterUneFormationToolStripMenuItem.Text = "Ajouter une formation";
             this.ajouterUneFormationToolStripMenuItem.Click += new System.EventHandler(this.AjouterUneFormationToolStripMenuItem_Click);
             // 
@@ -103,6 +105,13 @@
             this.quitterToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.QuitterToolStripMenuItem_Click);
+            // 
+            // gestionDesCommentairesToolStripMenuItem
+            // 
+            this.gestionDesCommentairesToolStripMenuItem.Name = "gestionDesCommentairesToolStripMenuItem";
+            this.gestionDesCommentairesToolStripMenuItem.Size = new System.Drawing.Size(159, 20);
+            this.gestionDesCommentairesToolStripMenuItem.Text = "Gestion des commentaires";
+            this.gestionDesCommentairesToolStripMenuItem.Click += new System.EventHandler(this.gestionDesCommentairesToolStripMenuItem_Click);
             // 
             // FormPrincipale
             // 
@@ -137,6 +146,7 @@
         private System.Windows.Forms.ToolStripMenuItem ajouterUneFormationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reconnecterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionDesCommentairesToolStripMenuItem;
     }
 }
 

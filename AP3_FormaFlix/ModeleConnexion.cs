@@ -63,7 +63,7 @@ namespace AP3_FormaFlix
                 myConnection.Open();
                 connopen = true;
             }
-            catch (Exception err)// gestion des erreurs
+            catch (Exception err) // gestion des erreurs
             {
                 MessageBox.Show("Erreur ouverture bdd : " + err, "PBS connection", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 connopen = false;

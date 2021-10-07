@@ -22,6 +22,15 @@ namespace AP3_FormaFlix
         {
             InitializeComponent();
         }
+        public FormListeFormations(string Maj)
+        {
+            InitializeComponent();
+            if (Maj == "modifier")
+                btnModifForma.Visible = true;
+            else
+                if (Maj == "supprimer")
+                    btnsuppforma.Visible = true;
+        }
 
         private void FormListeFormations_Load(object sender, EventArgs e)
         {

@@ -158,6 +158,7 @@
             this.btnsuppforma.TabIndex = 8;
             this.btnsuppforma.Text = "SUPPRIMER";
             this.btnsuppforma.UseVisualStyleBackColor = false;
+            this.btnsuppforma.Visible = false;
             this.btnsuppforma.Click += new System.EventHandler(this.btnsuppforma_Click);
             // 
             // btnModifForma
@@ -171,6 +172,7 @@
             this.btnModifForma.TabIndex = 9;
             this.btnModifForma.Text = "MODIFIER";
             this.btnModifForma.UseVisualStyleBackColor = false;
+            this.btnModifForma.Visible = false;
             this.btnModifForma.Click += new System.EventHandler(this.btnModifForma_Click);
             // 
             // FormListeFormations

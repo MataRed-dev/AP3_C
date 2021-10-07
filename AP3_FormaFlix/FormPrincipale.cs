@@ -72,5 +72,17 @@ namespace AP3_FormaFlix
             FormGestionCommentaire FGC = new FormGestionCommentaire();
             FGC.Show();
         }
+
+        private void modiferUneFormationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListeFormations FF = new FormListeFormations("modifier");
+            FF.Show();
+        }
+
+        private void supprimerUneFormationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListeFormations FF = new FormListeFormations("supprimer");
+            FF.Show();
+        }
     }
 }

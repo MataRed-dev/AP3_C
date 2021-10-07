@@ -45,7 +45,8 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.menuStrip1.BackColor = System.Drawing.Color.Black;
+            this.menuStrip1.Font = new System.Drawing.Font("Verdana", 8F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.connexionToolStripMenuItem,
             this.gestionDesFormationsToolStripMenuItem,
@@ -65,7 +66,7 @@
             this.reconnecterToolStripMenuItem});
             this.connexionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.connexionToolStripMenuItem.Name = "connexionToolStripMenuItem";
-            this.connexionToolStripMenuItem.Size = new System.Drawing.Size(140, 20);
+            this.connexionToolStripMenuItem.Size = new System.Drawing.Size(152, 20);
             this.connexionToolStripMenuItem.Text = "Gestion des utilisateurs";
             // 
             // deconnexionToolStripMenuItem
@@ -95,7 +96,7 @@
             this.supprimerUneFormationToolStripMenuItem});
             this.gestionDesFormationsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.gestionDesFormationsToolStripMenuItem.Name = "gestionDesFormationsToolStripMenuItem";
-            this.gestionDesFormationsToolStripMenuItem.Size = new System.Drawing.Size(143, 20);
+            this.gestionDesFormationsToolStripMenuItem.Size = new System.Drawing.Size(153, 20);
             this.gestionDesFormationsToolStripMenuItem.Text = "Gestion des Formations";
             // 
             // listerToutesLesFormationsToolStripMenuItem
@@ -103,7 +104,7 @@
             this.listerToutesLesFormationsToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.listerToutesLesFormationsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.listerToutesLesFormationsToolStripMenuItem.Name = "listerToutesLesFormationsToolStripMenuItem";
-            this.listerToutesLesFormationsToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.listerToutesLesFormationsToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.listerToutesLesFormationsToolStripMenuItem.Text = "Lister les formations";
             this.listerToutesLesFormationsToolStripMenuItem.Click += new System.EventHandler(this.ListerToutesLesFormationsToolStripMenuItem_Click);
             // 
@@ -112,7 +113,7 @@
             this.ajouterUneFormationToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.ajouterUneFormationToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.ajouterUneFormationToolStripMenuItem.Name = "ajouterUneFormationToolStripMenuItem";
-            this.ajouterUneFormationToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.ajouterUneFormationToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.ajouterUneFormationToolStripMenuItem.Text = "Ajouter une formation";
             this.ajouterUneFormationToolStripMenuItem.Click += new System.EventHandler(this.AjouterUneFormationToolStripMenuItem_Click);
             // 
@@ -121,7 +122,7 @@
             this.modiferUneFormationToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.modiferUneFormationToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.modiferUneFormationToolStripMenuItem.Name = "modiferUneFormationToolStripMenuItem";
-            this.modiferUneFormationToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.modiferUneFormationToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.modiferUneFormationToolStripMenuItem.Text = "Modifer une formation";
             this.modiferUneFormationToolStripMenuItem.Click += new System.EventHandler(this.modiferUneFormationToolStripMenuItem_Click);
             // 
@@ -130,7 +131,7 @@
             this.supprimerUneFormationToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.supprimerUneFormationToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.supprimerUneFormationToolStripMenuItem.Name = "supprimerUneFormationToolStripMenuItem";
-            this.supprimerUneFormationToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.supprimerUneFormationToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.supprimerUneFormationToolStripMenuItem.Text = "Supprimer une formation";
             this.supprimerUneFormationToolStripMenuItem.Click += new System.EventHandler(this.supprimerUneFormationToolStripMenuItem_Click);
             // 
@@ -138,14 +139,14 @@
             // 
             this.gestionDesCommentairesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.gestionDesCommentairesToolStripMenuItem.Name = "gestionDesCommentairesToolStripMenuItem";
-            this.gestionDesCommentairesToolStripMenuItem.Size = new System.Drawing.Size(159, 20);
+            this.gestionDesCommentairesToolStripMenuItem.Size = new System.Drawing.Size(171, 20);
             this.gestionDesCommentairesToolStripMenuItem.Text = "Gestion des commentaires";
             this.gestionDesCommentairesToolStripMenuItem.Click += new System.EventHandler(this.gestionDesCommentairesToolStripMenuItem_Click);
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.QuitterToolStripMenuItem_Click);
             // 
@@ -153,9 +154,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(885, 485);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

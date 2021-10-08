@@ -40,7 +40,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 51);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(26, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 17);
             this.label1.TabIndex = 1;
@@ -51,7 +52,8 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 97);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(26, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 17);
             this.label2.TabIndex = 2;
@@ -60,7 +62,7 @@
             // tbLogin
             // 
             this.tbLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLogin.Location = new System.Drawing.Point(169, 49);
+            this.tbLogin.Location = new System.Drawing.Point(169, 67);
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(130, 22);
             this.tbLogin.TabIndex = 3;
@@ -68,7 +70,7 @@
             // tbmdp
             // 
             this.tbmdp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbmdp.Location = new System.Drawing.Point(169, 95);
+            this.tbmdp.Location = new System.Drawing.Point(169, 113);
             this.tbmdp.Name = "tbmdp";
             this.tbmdp.PasswordChar = '*';
             this.tbmdp.Size = new System.Drawing.Size(130, 22);
@@ -77,7 +79,6 @@
             // btnConnecter
             // 
             this.btnConnecter.BackColor = System.Drawing.Color.Black;
-            this.btnConnecter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConnecter.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConnecter.ForeColor = System.Drawing.Color.White;
             this.btnConnecter.Location = new System.Drawing.Point(203, 185);
@@ -92,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(327, 261);
             this.Controls.Add(this.btnConnecter);

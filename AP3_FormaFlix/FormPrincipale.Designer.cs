@@ -74,7 +74,7 @@
             this.deconnexionToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.deconnexionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.deconnexionToolStripMenuItem.Name = "deconnexionToolStripMenuItem";
-            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.deconnexionToolStripMenuItem.Text = "Deconnexion";
             this.deconnexionToolStripMenuItem.Click += new System.EventHandler(this.DeconnexionToolStripMenuItem_Click);
             // 
@@ -83,7 +83,7 @@
             this.reconnecterToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.reconnecterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.reconnecterToolStripMenuItem.Name = "reconnecterToolStripMenuItem";
-            this.reconnecterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reconnecterToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.reconnecterToolStripMenuItem.Text = "Reconnecter";
             this.reconnecterToolStripMenuItem.Click += new System.EventHandler(this.ReconnecterToolStripMenuItem_Click);
             // 
@@ -145,6 +145,7 @@
             // 
             // quitterToolStripMenuItem
             // 
+            this.quitterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
             this.quitterToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.quitterToolStripMenuItem.Text = "Quitter";
@@ -159,7 +160,7 @@
             this.ClientSize = new System.Drawing.Size(885, 485);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormPrincipale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -81,5 +81,10 @@ namespace AP3_FormaFlix
            else
                MessageBox.Show("ERREUR : Saisir un nom et un mot de passe");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

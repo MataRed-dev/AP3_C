@@ -53,15 +53,16 @@ namespace AP3_FormaFlix
             // 
             // dtpdatepublication
             // 
-            this.dtpdatepublication.Location = new System.Drawing.Point(230, 426);
+            this.dtpdatepublication.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpdatepublication.Location = new System.Drawing.Point(223, 423);
             this.dtpdatepublication.Name = "dtpdatepublication";
-            this.dtpdatepublication.Size = new System.Drawing.Size(183, 20);
+            this.dtpdatepublication.Size = new System.Drawing.Size(183, 23);
             this.dtpdatepublication.TabIndex = 32;
             // 
             // tbImage
             // 
             this.tbImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbImage.Location = new System.Drawing.Point(230, 292);
+            this.tbImage.Location = new System.Drawing.Point(223, 289);
             this.tbImage.Multiline = true;
             this.tbImage.Name = "tbImage";
             this.tbImage.Size = new System.Drawing.Size(183, 81);
@@ -72,7 +73,7 @@ namespace AP3_FormaFlix
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(145, 295);
+            this.label5.Location = new System.Drawing.Point(154, 296);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 23);
             this.label5.TabIndex = 29;
@@ -105,7 +106,7 @@ namespace AP3_FormaFlix
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(55, 422);
+            this.label6.Location = new System.Drawing.Point(64, 423);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(134, 23);
             this.label6.TabIndex = 31;
@@ -117,7 +118,7 @@ namespace AP3_FormaFlix
             this.gbCompetences.Controls.Add(this.cbCompetences);
             this.gbCompetences.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbCompetences.ForeColor = System.Drawing.Color.White;
-            this.gbCompetences.Location = new System.Drawing.Point(494, 108);
+            this.gbCompetences.Location = new System.Drawing.Point(487, 105);
             this.gbCompetences.Name = "gbCompetences";
             this.gbCompetences.Size = new System.Drawing.Size(200, 211);
             this.gbCompetences.TabIndex = 28;
@@ -127,7 +128,7 @@ namespace AP3_FormaFlix
             // cbVisible
             // 
             this.cbVisible.AutoSize = true;
-            this.cbVisible.Location = new System.Drawing.Point(230, 385);
+            this.cbVisible.Location = new System.Drawing.Point(223, 382);
             this.cbVisible.Name = "cbVisible";
             this.cbVisible.Size = new System.Drawing.Size(45, 17);
             this.cbVisible.TabIndex = 26;
@@ -139,7 +140,7 @@ namespace AP3_FormaFlix
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(77, 379);
+            this.label4.Location = new System.Drawing.Point(86, 380);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 23);
             this.label4.TabIndex = 25;
@@ -148,7 +149,7 @@ namespace AP3_FormaFlix
             // tbVideo
             // 
             this.tbVideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbVideo.Location = new System.Drawing.Point(230, 252);
+            this.tbVideo.Location = new System.Drawing.Point(223, 249);
             this.tbVideo.Multiline = true;
             this.tbVideo.Name = "tbVideo";
             this.tbVideo.Size = new System.Drawing.Size(183, 28);
@@ -159,7 +160,7 @@ namespace AP3_FormaFlix
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(71, 250);
+            this.label3.Location = new System.Drawing.Point(80, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 23);
             this.label3.TabIndex = 23;
@@ -168,7 +169,7 @@ namespace AP3_FormaFlix
             // tbDescription
             // 
             this.tbDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDescription.Location = new System.Drawing.Point(230, 152);
+            this.tbDescription.Location = new System.Drawing.Point(223, 149);
             this.tbDescription.Multiline = true;
             this.tbDescription.Name = "tbDescription";
             this.tbDescription.Size = new System.Drawing.Size(183, 81);
@@ -179,7 +180,7 @@ namespace AP3_FormaFlix
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(7, 152);
+            this.label2.Location = new System.Drawing.Point(10, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(190, 23);
             this.label2.TabIndex = 21;
@@ -188,7 +189,7 @@ namespace AP3_FormaFlix
             // tbLibelle
             // 
             this.tbLibelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLibelle.Location = new System.Drawing.Point(230, 108);
+            this.tbLibelle.Location = new System.Drawing.Point(223, 105);
             this.tbLibelle.Name = "tbLibelle";
             this.tbLibelle.Size = new System.Drawing.Size(183, 22);
             this.tbLibelle.TabIndex = 20;
@@ -198,7 +199,7 @@ namespace AP3_FormaFlix
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(38, 108);
+            this.label1.Location = new System.Drawing.Point(41, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 23);
             this.label1.TabIndex = 19;
@@ -209,7 +210,7 @@ namespace AP3_FormaFlix
             this.btnModifier.BackColor = System.Drawing.Color.Black;
             this.btnModifier.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModifier.ForeColor = System.Drawing.Color.White;
-            this.btnModifier.Location = new System.Drawing.Point(213, 485);
+            this.btnModifier.Location = new System.Drawing.Point(206, 482);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(86, 41);
             this.btnModifier.TabIndex = 18;
@@ -222,7 +223,7 @@ namespace AP3_FormaFlix
             this.btnFermer.BackColor = System.Drawing.Color.Black;
             this.btnFermer.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFermer.ForeColor = System.Drawing.Color.White;
-            this.btnFermer.Location = new System.Drawing.Point(327, 485);
+            this.btnFermer.Location = new System.Drawing.Point(320, 482);
             this.btnFermer.Name = "btnFermer";
             this.btnFermer.Size = new System.Drawing.Size(86, 41);
             this.btnFermer.TabIndex = 17;
@@ -235,7 +236,7 @@ namespace AP3_FormaFlix
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(507, 335);
+            this.label7.Location = new System.Drawing.Point(500, 332);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(167, 38);
             this.label7.TabIndex = 33;
@@ -246,7 +247,7 @@ namespace AP3_FormaFlix
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bebas Neue", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(245, 23);
+            this.label8.Location = new System.Drawing.Point(238, 20);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(282, 41);
             this.label8.TabIndex = 34;
@@ -277,7 +278,8 @@ namespace AP3_FormaFlix
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.btnFermer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormModifFormation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FORMA\'FLIX : Modification d\'une formation";

@@ -51,13 +51,13 @@
             this.dgvFormations.AllowUserToAddRows = false;
             this.dgvFormations.AllowUserToDeleteRows = false;
             this.dgvFormations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvFormations.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvFormations.BackgroundColor = System.Drawing.Color.White;
             this.dgvFormations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFormations.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -68,8 +68,10 @@
             this.dgvFormations.ReadOnly = true;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvFormations.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvFormations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFormations.Size = new System.Drawing.Size(555, 150);
             this.dgvFormations.TabIndex = 0;
+            this.dgvFormations.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvFormations_CellMouseClick);
             this.dgvFormations.SelectionChanged += new System.EventHandler(this.DgvFormations_SelectionChanged);
             // 
             // contextMenuStrip1
@@ -84,7 +86,6 @@
             this.listeDesCompétencesToolStripMenuItem.Name = "listeDesCompétencesToolStripMenuItem";
             this.listeDesCompétencesToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.listeDesCompétencesToolStripMenuItem.Text = "Liste des compétences";
-            this.listeDesCompétencesToolStripMenuItem.Click += new System.EventHandler(this.ListeDesCompétencesToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -125,6 +126,7 @@
             // 
             // lbCompetences
             // 
+            this.lbCompetences.BackColor = System.Drawing.Color.White;
             this.lbCompetences.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCompetences.FormattingEnabled = true;
             this.lbCompetences.ItemHeight = 16;
@@ -166,7 +168,7 @@
             this.btnModifForma.BackColor = System.Drawing.Color.Black;
             this.btnModifForma.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModifForma.ForeColor = System.Drawing.Color.White;
-            this.btnModifForma.Location = new System.Drawing.Point(238, 209);
+            this.btnModifForma.Location = new System.Drawing.Point(374, 209);
             this.btnModifForma.Name = "btnModifForma";
             this.btnModifForma.Size = new System.Drawing.Size(113, 39);
             this.btnModifForma.TabIndex = 9;
@@ -190,7 +192,8 @@
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvFormations);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormListeFormations";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FORMA\'FLIX : Liste des Formations";

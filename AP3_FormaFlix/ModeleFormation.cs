@@ -50,6 +50,13 @@ namespace AP3_FormaFlix
             Controleur.VmodeleC.DT[4].Clear();
             Controleur.VmodeleC.charger("select IDCOMPETENCE, LIBELLECOMPETENCE from competence  WHERE LIBELLECOMPETENCE = '" + libC + "';", Controleur.VmodeleC.DT[4]);
         }
+
+        public void charger_Commentaires()
+        {
+            Controleur.VmodeleC.DT[5].Clear();
+            Controleur.VmodeleC.charger("select idComm, texteComm ,nominscrit, prenomInscrit FROM commentaire C INNER JOIN inscrit I ON C.codeInscrit = I.idInscrit WHERE etatComm = 1 LIMIT 1;", Controleur.VmodeleC.DT[5]);
+        }
+
         /// <summary>
         /// Permet d'ajouter une formation à la table FORMATION avec les éléments du formulaire passés en paramètre
         /// </summary>
@@ -205,5 +212,29 @@ namespace AP3_FormaFlix
             }
         }
 
+        public bool ModifEtatCommentaire(int idC, string texte, int idE)
+        {
+            try
+            {
+                // préparation de la requête 
+                string requete = "UPDATE commentaire SET etatComm = @idE, texteComm = @texte WHERE idComm = @idC";
+                MySqlCommand command = Controleur.VmodeleC.MyConnection.CreateCommand();
+                command.CommandText = requete;
+
+                // mise à jour des paramètres de la requête préparée avec les infos passés en paramètre de la méthode
+                command.Parameters.AddWithValue("idC", idC);
+                command.Parameters.AddWithValue("idE", idE);
+                command.Parameters.AddWithValue("texte", texte);
+                // Exécution de la requête
+                int i = command.ExecuteNonQuery();
+
+                // i est positif si l'insertion a pu avoir lieu
+                return (i > 0);
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

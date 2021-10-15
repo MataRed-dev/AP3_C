@@ -129,6 +129,14 @@ namespace AP3_FormaFlix
             FormModifFormation FM = new FormModifFormation(Convert.ToInt32(dgvFormations.CurrentRow.Index));
             FM.Show();
         }
+
+        private void dgvFormations_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                gbCompetences.Visible = true;
+            }
+        }
     }
 }
 

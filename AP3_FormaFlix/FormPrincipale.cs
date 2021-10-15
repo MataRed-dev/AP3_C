@@ -52,7 +52,9 @@ namespace AP3_FormaFlix
 
         private void ListerToutesLesFormationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormListeFormations FF = new FormListeFormations();
+            FF.Closed += (s, args) => this.Close();
             FF.Show();
         }
 
@@ -63,25 +65,35 @@ namespace AP3_FormaFlix
 
         private void AjouterUneFormationToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            this.Hide();
             FormAjoutFormation FA = new FormAjoutFormation();
+            FA.Closed += (s, args) => this.Close();
             FA.Show();
         }
 
         private void gestionDesCommentairesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormGestionCommentaire FGC = new FormGestionCommentaire();
+            FGC.Closed += (s, args) => this.Close();
             FGC.Show();
         }
 
         private void modiferUneFormationToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormListeFormations FF = new FormListeFormations("modifier");
+            FF.Closed += (s, args) => this.Close();
             FF.Show();
         }
 
         private void supprimerUneFormationToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            this.Hide();
             FormListeFormations FF = new FormListeFormations("supprimer");
+            FF.Closed += (s, args) => this.Close();
             FF.Show();
         }
     }

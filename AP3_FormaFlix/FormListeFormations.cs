@@ -63,7 +63,10 @@ namespace AP3_FormaFlix
 
         private void BtnFermer_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            FormPrincipale FF = new FormPrincipale("");
+            FF.Closed += (s, args) => this.Close();
+            FF.Show();
         }
 
         /// <summary>

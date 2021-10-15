@@ -42,22 +42,34 @@ namespace AP3_FormaFlix
 
         private void btnFermer_Click(object sender, EventArgs e)
         {
-            this.Close();
+
+            this.Hide();
+            FormPrincipale FP = new FormPrincipale("");
+            FP.Closed += (s, args) => this.Close();
+            FP.Show();
         }
 
         private void btnNePasValider_Click(object sender, EventArgs e)
         {
             //Modifier l'étét du commentaire pour le mettre à non validé ( = 3 )
-            Controleur.VmodeleF.ModifEtatCommentaire(Convert.ToInt32(Controleur.VmodeleC.DT[5].Rows[0][0]), tbCommentaire.Text, 3);
+            Controleur.VmodeleF.ModifEtatCommentaire(Convert.ToInt32(Controleur.VmodeleC.DT[5].Rows[0][0]), 3);
             FormGestionCommentaire_Load(sender, e);
         }
 
         private void btnValider_Click(object sender, EventArgs e)
         {
             //Modifier l'étét du commentaire pour le mettre à  validé ( = 2 )
-            Controleur.VmodeleF.ModifEtatCommentaire(Convert.ToInt32(Controleur.VmodeleC.DT[5].Rows[0][0]), tbCommentaire.Text, 2);
+            Controleur.VmodeleF.ModifEtatCommentaire(Convert.ToInt32(Controleur.VmodeleC.DT[5].Rows[0][0]), 2);
             FormGestionCommentaire_Load(sender, e);
 
+        }
+
+        private void btnListeComm_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormListeCommentaire FLC = new FormListeCommentaire();
+            FLC.Closed += (s, args) => this.Close();
+            FLC.Show();
         }
     }
 }

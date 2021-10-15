@@ -69,6 +69,12 @@
     <Compile Include="FormGestionCommentaire.Designer.cs">
       <DependentUpon>FormGestionCommentaire.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListeCommentaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListeCommentaire.Designer.cs">
+      <DependentUpon>FormListeCommentaire.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormListeFormations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormGestionCommentaire.resx">
       <DependentUpon>FormGestionCommentaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListeCommentaire.resx">
+      <DependentUpon>FormListeCommentaire.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListeFormations.resx">
       <DependentUpon>FormListeFormations.cs</DependentUpon>

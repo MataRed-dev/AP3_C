@@ -47,14 +47,24 @@ namespace AP3_FormaFlix
         /// <param name="libC">libellé de la compétence</param>
         public void charger_CompetenceSelonLibelle(string libC)
         {
-            Controleur.VmodeleC.DT[4].Clear();
             Controleur.VmodeleC.charger("select IDCOMPETENCE, LIBELLECOMPETENCE from competence  WHERE LIBELLECOMPETENCE = '" + libC + "';", Controleur.VmodeleC.DT[4]);
         }
 
         public void charger_Commentaires()
         {
-            Controleur.VmodeleC.DT[5].Clear();
             Controleur.VmodeleC.charger("select idComm, texteComm ,nominscrit, prenomInscrit FROM commentaire C INNER JOIN inscrit I ON C.codeInscrit = I.idInscrit WHERE etatComm = 1 LIMIT 1;", Controleur.VmodeleC.DT[5]);
+        }
+        public void charger_CommentaireValide()
+        {
+            Controleur.VmodeleC.charger("select idComm, texteComm, nominscrit, prenomInscrit FROM commentaire C INNER JOIN inscrit I ON C.codeInscrit = I.idInscrit WHERE etatComm = 2; ", Controleur.VmodeleC.DT[6]);
+        }
+        public void charger_CommentaireNonValide()
+        {
+            Controleur.VmodeleC.charger("select idComm, texteComm ,nominscrit, prenomInscrit FROM commentaire C INNER JOIN inscrit I ON C.codeInscrit = I.idInscrit WHERE etatComm = 3;", Controleur.VmodeleC.DT[7]);
+        }
+        public void charger_CommentaireATraiter()
+        {
+            Controleur.VmodeleC.charger("select idComm, texteComm ,nominscrit, prenomInscrit FROM commentaire C INNER JOIN inscrit I ON C.codeInscrit = I.idInscrit WHERE etatComm = 1;", Controleur.VmodeleC.DT[8]);
         }
 
         /// <summary>
@@ -212,19 +222,18 @@ namespace AP3_FormaFlix
             }
         }
 
-        public bool ModifEtatCommentaire(int idC, string texte, int idE)
+        public bool ModifEtatCommentaire(int idC, int idE)
         {
             try
             {
                 // préparation de la requête 
-                string requete = "UPDATE commentaire SET etatComm = @idE, texteComm = @texte WHERE idComm = @idC";
+                string requete = "UPDATE commentaire SET etatComm = @idE WHERE idComm = @idC";
                 MySqlCommand command = Controleur.VmodeleC.MyConnection.CreateCommand();
                 command.CommandText = requete;
 
                 // mise à jour des paramètres de la requête préparée avec les infos passés en paramètre de la méthode
                 command.Parameters.AddWithValue("idC", idC);
                 command.Parameters.AddWithValue("idE", idE);
-                command.Parameters.AddWithValue("texte", texte);
                 // Exécution de la requête
                 int i = command.ExecuteNonQuery();
 

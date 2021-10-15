@@ -37,6 +37,7 @@ namespace AP3_FormaFlix
             this.btnNePasValider = new System.Windows.Forms.Button();
             this.btnFermer = new System.Windows.Forms.Button();
             this.lblRienATrraiter = new System.Windows.Forms.Label();
+            this.btnListeComm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label8
@@ -44,7 +45,7 @@ namespace AP3_FormaFlix
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bebas Neue", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(234, 20);
+            this.label8.Location = new System.Drawing.Point(222, 22);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(314, 41);
             this.label8.TabIndex = 19;
@@ -53,6 +54,7 @@ namespace AP3_FormaFlix
             // tbCommentaire
             // 
             this.tbCommentaire.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCommentaire.Enabled = false;
             this.tbCommentaire.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCommentaire.Location = new System.Drawing.Point(81, 161);
             this.tbCommentaire.Multiline = true;
@@ -127,12 +129,25 @@ namespace AP3_FormaFlix
             this.lblRienATrraiter.AutoSize = true;
             this.lblRienATrraiter.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRienATrraiter.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRienATrraiter.Location = new System.Drawing.Point(236, 269);
+            this.lblRienATrraiter.Location = new System.Drawing.Point(236, 282);
             this.lblRienATrraiter.Name = "lblRienATrraiter";
             this.lblRienATrraiter.Size = new System.Drawing.Size(296, 25);
             this.lblRienATrraiter.TabIndex = 26;
             this.lblRienATrraiter.Text = "Vous n\'avez aucun commentaire à traiter";
             this.lblRienATrraiter.Visible = false;
+            // 
+            // btnListeComm
+            // 
+            this.btnListeComm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListeComm.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListeComm.ForeColor = System.Drawing.Color.White;
+            this.btnListeComm.Location = new System.Drawing.Point(12, 12);
+            this.btnListeComm.Name = "btnListeComm";
+            this.btnListeComm.Size = new System.Drawing.Size(115, 67);
+            this.btnListeComm.TabIndex = 27;
+            this.btnListeComm.Text = "liste des commentaires";
+            this.btnListeComm.UseVisualStyleBackColor = true;
+            this.btnListeComm.Click += new System.EventHandler(this.btnListeComm_Click);
             // 
             // FormGestionCommentaire
             // 
@@ -142,6 +157,7 @@ namespace AP3_FormaFlix
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 560);
             this.ControlBox = false;
+            this.Controls.Add(this.btnListeComm);
             this.Controls.Add(this.lblRienATrraiter);
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.btnNePasValider);
@@ -172,5 +188,6 @@ namespace AP3_FormaFlix
         private System.Windows.Forms.Button btnNePasValider;
         private System.Windows.Forms.Button btnFermer;
         private System.Windows.Forms.Label lblRienATrraiter;
+        private System.Windows.Forms.Button btnListeComm;
     }
 }

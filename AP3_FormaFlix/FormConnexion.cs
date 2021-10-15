@@ -60,8 +60,6 @@ namespace AP3_FormaFlix
                         // on compare le mot de passe saisi avec le mot de passe crypté de la BD lié à ce login
                         if (BCrypt.Net.BCrypt.Verify(tbmdp.Text, Controleur.VmodeleC.DT[0].Rows[0]["MOTPASSE"].ToString()))
                         {
-                            MessageBox.Show("Connecté en tant qu'utilisateur '" + Controleur.VmodeleC.DT[0].Rows[0]["NOM"].ToString()+ "'");
-
                             // on ouvre la vue principale de l'application en passant en paramètre le nom de l'utilisateur
                             FormPrincipale FC = new FormPrincipale(Controleur.VmodeleC.DT[0].Rows[0]["NOM"].ToString());
                             FC.Show();

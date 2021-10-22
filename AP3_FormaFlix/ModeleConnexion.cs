@@ -48,8 +48,7 @@ namespace AP3_FormaFlix
                 dT.Add(new DataTable());
             }
         }
-
-
+        
         /// <summary>
         /// Méthode pour se connecter à la BD
         /// </summary>

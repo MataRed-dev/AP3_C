@@ -16,7 +16,7 @@ namespace AP3_FormaFlix
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormConnexion());
+            Application.Run(new FormTestCorner());
         }
     }
 }

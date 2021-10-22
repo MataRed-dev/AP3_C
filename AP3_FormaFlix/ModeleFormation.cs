@@ -75,12 +75,12 @@ namespace AP3_FormaFlix
         /// <param name="video"></param>
         /// <param name="visible"></param>
         /// <returns></returns>
-        public bool AjoutFormation(string libelle, string description, string video, string image, bool visible, DateTime date)
+        public bool AjoutFormation(string libelle, string description, string video, string image, bool visible, DateTime date, int auteur)
         {
             try
             {
                 // préparation de la requête 
-                string requete = "insert into formation values (null, @lib, @descr, @v, @visible, @date, @image)";
+                string requete = "insert into formation values (null, @lib, @descr, @v, @visible, @date, @image, @auteur)";
                 MySqlCommand command = Controleur.VmodeleC.MyConnection.CreateCommand();
                 command.CommandText = requete;
 
@@ -91,6 +91,7 @@ namespace AP3_FormaFlix
                 command.Parameters.AddWithValue("visible", visible);
                 command.Parameters.AddWithValue("date", date);
                 command.Parameters.AddWithValue("image", image);
+                command.Parameters.AddWithValue("auteur", auteur);
                 // Exécution de la requête
                 int i = command.ExecuteNonQuery();
 

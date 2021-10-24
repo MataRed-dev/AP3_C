@@ -26,6 +26,8 @@ namespace AP3_FormaFlix
             Controleur.VmodeleC.sedeconnecter();
             MessageBox.Show("Vous êtes déconnecté de la base de données");
             gestionDesFormationsToolStripMenuItem.Enabled = false;
+            gestionDesCommentairesToolStripMenuItem.Enabled = false;
+            ajouterUtilisateurToolStripMenuItem.Enabled = false;
         }
 
         private void ReconnecterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -96,6 +98,15 @@ namespace AP3_FormaFlix
             FormAjoutUser FASU = new FormAjoutUser();
             FASU.Closed += (s, args) => this.Close();
             FASU.Show();
+        }
+
+        private void deconnexionToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            FormConnexion FC = new FormConnexion();
+            FC.Closed += (s, args) => this.Close();
+            FC.Show();
         }
     }
 }

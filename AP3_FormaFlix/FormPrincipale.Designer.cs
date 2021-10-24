@@ -41,6 +41,7 @@
             this.supprimerUneFormationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDesCommentairesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deconnexionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +53,7 @@
             this.connexionToolStripMenuItem,
             this.gestionDesFormationsToolStripMenuItem,
             this.gestionDesCommentairesToolStripMenuItem,
+            this.deconnexionToolStripMenuItem1,
             this.quitterToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -163,6 +165,14 @@
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.QuitterToolStripMenuItem_Click);
             // 
+            // deconnexionToolStripMenuItem1
+            // 
+            this.deconnexionToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.deconnexionToolStripMenuItem1.Name = "deconnexionToolStripMenuItem1";
+            this.deconnexionToolStripMenuItem1.Size = new System.Drawing.Size(100, 20);
+            this.deconnexionToolStripMenuItem1.Text = "Deconnexion";
+            this.deconnexionToolStripMenuItem1.Click += new System.EventHandler(this.deconnexionToolStripMenuItem1_Click);
+            // 
             // FormPrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -202,6 +212,7 @@
         private System.Windows.Forms.ToolStripMenuItem modiferUneFormationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supprimerUneFormationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterUtilisateurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deconnexionToolStripMenuItem1;
     }
 }
 

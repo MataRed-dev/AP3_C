@@ -123,6 +123,7 @@
     <Compile Include="FormTestCorner.Designer.cs">
       <DependentUpon>FormTestCorner.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModeleUtilisateur.cs" />
     <Compile Include="ModeleConnexion.cs" />
     <Compile Include="ModeleFormation.cs" />
     <Compile Include="Program.cs" />

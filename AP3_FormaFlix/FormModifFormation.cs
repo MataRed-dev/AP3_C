@@ -74,10 +74,10 @@ namespace AP3_FormaFlix
 
         private void btnFermer_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Voulez-vous vraiment fermer sans modifier cette formation ?", "Fermez ?", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            this.Hide();
+            FormPrincipale FF = new FormPrincipale("");
+            FF.Closed += (s, args) => this.Close();
+            FF.Show();
         }
 
         private void lbCompetences_MouseDoubleClick(object sender, MouseEventArgs e)

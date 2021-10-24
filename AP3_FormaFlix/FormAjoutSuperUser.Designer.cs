@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.tbConfirmMdp = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbMdp = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,22 +37,26 @@
             this.tbNom = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.tbConfirmMdp = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cbAdministrateur = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.help = new System.Windows.Forms.Button();
             this.lblHelpMessage = new System.Windows.Forms.Label();
+            this.btnAjouter = new System.Windows.Forms.Button();
+            this.btnAnnuler = new System.Windows.Forms.Button();
+            this.btnFermer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // tbEmail
+            // tbConfirmMdp
             // 
-            this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.Location = new System.Drawing.Point(362, 291);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(324, 22);
-            this.tbEmail.TabIndex = 21;
+            this.tbConfirmMdp.Font = new System.Drawing.Font("Verdana", 10.25F);
+            this.tbConfirmMdp.Location = new System.Drawing.Point(344, 245);
+            this.tbConfirmMdp.Name = "tbConfirmMdp";
+            this.tbConfirmMdp.PasswordChar = '*';
+            this.tbConfirmMdp.Size = new System.Drawing.Size(324, 24);
+            this.tbConfirmMdp.TabIndex = 21;
             // 
             // label5
             // 
@@ -67,10 +71,11 @@
             // 
             // tbMdp
             // 
-            this.tbMdp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMdp.Location = new System.Drawing.Point(362, 197);
+            this.tbMdp.Font = new System.Drawing.Font("Verdana", 10.25F);
+            this.tbMdp.Location = new System.Drawing.Point(344, 197);
             this.tbMdp.Name = "tbMdp";
-            this.tbMdp.Size = new System.Drawing.Size(204, 22);
+            this.tbMdp.PasswordChar = '*';
+            this.tbMdp.Size = new System.Drawing.Size(324, 24);
             this.tbMdp.TabIndex = 19;
             // 
             // label3
@@ -86,10 +91,10 @@
             // 
             // tbPrenom
             // 
-            this.tbPrenom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPrenom.Location = new System.Drawing.Point(362, 151);
+            this.tbPrenom.Font = new System.Drawing.Font("Verdana", 10.25F);
+            this.tbPrenom.Location = new System.Drawing.Point(344, 151);
             this.tbPrenom.Name = "tbPrenom";
-            this.tbPrenom.Size = new System.Drawing.Size(204, 22);
+            this.tbPrenom.Size = new System.Drawing.Size(324, 24);
             this.tbPrenom.TabIndex = 17;
             // 
             // label2
@@ -105,10 +110,10 @@
             // 
             // tbNom
             // 
-            this.tbNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNom.Location = new System.Drawing.Point(362, 107);
+            this.tbNom.Font = new System.Drawing.Font("Verdana", 10.25F);
+            this.tbNom.Location = new System.Drawing.Point(344, 107);
             this.tbNom.Name = "tbNom";
-            this.tbNom.Size = new System.Drawing.Size(204, 22);
+            this.tbNom.Size = new System.Drawing.Size(324, 24);
             this.tbNom.TabIndex = 15;
             // 
             // label1
@@ -133,13 +138,14 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "ADMINISTRATEUR";
             // 
-            // tbConfirmMdp
+            // tbEmail
             // 
-            this.tbConfirmMdp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbConfirmMdp.Location = new System.Drawing.Point(362, 245);
-            this.tbConfirmMdp.Name = "tbConfirmMdp";
-            this.tbConfirmMdp.Size = new System.Drawing.Size(204, 22);
-            this.tbConfirmMdp.TabIndex = 24;
+            this.tbEmail.Font = new System.Drawing.Font("Verdana", 10.25F);
+            this.tbEmail.Location = new System.Drawing.Point(344, 290);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(324, 24);
+            this.tbEmail.TabIndex = 24;
+            this.tbEmail.Enter += new System.EventHandler(this.tbEmail_Enter);
             // 
             // label6
             // 
@@ -176,6 +182,7 @@
             // help
             // 
             this.help.BackColor = System.Drawing.Color.Black;
+            this.help.Enabled = false;
             this.help.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.help.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.help.ForeColor = System.Drawing.Color.White;
@@ -185,8 +192,7 @@
             this.help.TabIndex = 42;
             this.help.Text = "?";
             this.help.UseVisualStyleBackColor = false;
-            this.help.Visible = false;
-            this.help.Click += new System.EventHandler(this.help_Click);
+            this.help.MouseLeave += new System.EventHandler(this.help_MouseLeave);
             this.help.MouseHover += new System.EventHandler(this.help_MouseHover);
             // 
             // lblHelpMessage
@@ -199,6 +205,46 @@
             this.lblHelpMessage.Size = new System.Drawing.Size(281, 13);
             this.lblHelpMessage.TabIndex = 43;
             this.lblHelpMessage.Text = "Permet à l\'utilisateur de créer d\'autre utilisateur";
+            this.lblHelpMessage.Visible = false;
+            // 
+            // btnAjouter
+            // 
+            this.btnAjouter.BackColor = System.Drawing.Color.Black;
+            this.btnAjouter.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjouter.ForeColor = System.Drawing.Color.White;
+            this.btnAjouter.Location = new System.Drawing.Point(216, 386);
+            this.btnAjouter.Name = "btnAjouter";
+            this.btnAjouter.Size = new System.Drawing.Size(136, 41);
+            this.btnAjouter.TabIndex = 44;
+            this.btnAjouter.Text = "AJOUTER";
+            this.btnAjouter.UseVisualStyleBackColor = false;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
+            // 
+            // btnAnnuler
+            // 
+            this.btnAnnuler.BackColor = System.Drawing.Color.Black;
+            this.btnAnnuler.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnnuler.ForeColor = System.Drawing.Color.White;
+            this.btnAnnuler.Location = new System.Drawing.Point(358, 386);
+            this.btnAnnuler.Name = "btnAnnuler";
+            this.btnAnnuler.Size = new System.Drawing.Size(136, 41);
+            this.btnAnnuler.TabIndex = 45;
+            this.btnAnnuler.Text = "ANNULER";
+            this.btnAnnuler.UseVisualStyleBackColor = false;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
+            // 
+            // btnFermer
+            // 
+            this.btnFermer.BackColor = System.Drawing.Color.Black;
+            this.btnFermer.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFermer.ForeColor = System.Drawing.Color.White;
+            this.btnFermer.Location = new System.Drawing.Point(500, 386);
+            this.btnFermer.Name = "btnFermer";
+            this.btnFermer.Size = new System.Drawing.Size(136, 41);
+            this.btnFermer.TabIndex = 46;
+            this.btnFermer.Text = "FERMER";
+            this.btnFermer.UseVisualStyleBackColor = false;
+            this.btnFermer.Click += new System.EventHandler(this.btnFermer_Click);
             // 
             // FormAjoutUser
             // 
@@ -206,14 +252,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnFermer);
+            this.Controls.Add(this.btnAnnuler);
+            this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.lblHelpMessage);
             this.Controls.Add(this.help);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbAdministrateur);
-            this.Controls.Add(this.tbConfirmMdp);
+            this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.tbEmail);
+            this.Controls.Add(this.tbConfirmMdp);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbMdp);
             this.Controls.Add(this.label3);
@@ -232,7 +281,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.TextBox tbConfirmMdp;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbMdp;
         private System.Windows.Forms.Label label3;
@@ -241,12 +290,15 @@
         private System.Windows.Forms.TextBox tbNom;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbConfirmMdp;
+        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox cbAdministrateur;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.Button help;
         private System.Windows.Forms.Label lblHelpMessage;
+        private System.Windows.Forms.Button btnAjouter;
+        private System.Windows.Forms.Button btnAnnuler;
+        private System.Windows.Forms.Button btnFermer;
     }
 }

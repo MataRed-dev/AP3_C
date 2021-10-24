@@ -87,7 +87,7 @@ namespace AP3_FormaFlix
             // 
             // btnValider
             // 
-            this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnValider.BackColor = System.Drawing.Color.Black;
             this.btnValider.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnValider.ForeColor = System.Drawing.Color.White;
             this.btnValider.Location = new System.Drawing.Point(135, 472);
@@ -95,12 +95,12 @@ namespace AP3_FormaFlix
             this.btnValider.Size = new System.Drawing.Size(134, 47);
             this.btnValider.TabIndex = 23;
             this.btnValider.Text = "VALIDER";
-            this.btnValider.UseVisualStyleBackColor = true;
+            this.btnValider.UseVisualStyleBackColor = false;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
             // btnNePasValider
             // 
-            this.btnNePasValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNePasValider.BackColor = System.Drawing.Color.Black;
             this.btnNePasValider.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNePasValider.ForeColor = System.Drawing.Color.White;
             this.btnNePasValider.Location = new System.Drawing.Point(300, 472);
@@ -108,12 +108,12 @@ namespace AP3_FormaFlix
             this.btnNePasValider.Size = new System.Drawing.Size(134, 47);
             this.btnNePasValider.TabIndex = 24;
             this.btnNePasValider.Text = "NE PAS VALIDER";
-            this.btnNePasValider.UseVisualStyleBackColor = true;
+            this.btnNePasValider.UseVisualStyleBackColor = false;
             this.btnNePasValider.Click += new System.EventHandler(this.btnNePasValider_Click);
             // 
             // btnFermer
             // 
-            this.btnFermer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFermer.BackColor = System.Drawing.Color.Black;
             this.btnFermer.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFermer.ForeColor = System.Drawing.Color.White;
             this.btnFermer.Location = new System.Drawing.Point(464, 472);
@@ -121,7 +121,7 @@ namespace AP3_FormaFlix
             this.btnFermer.Size = new System.Drawing.Size(134, 47);
             this.btnFermer.TabIndex = 25;
             this.btnFermer.Text = "FERMER";
-            this.btnFermer.UseVisualStyleBackColor = true;
+            this.btnFermer.UseVisualStyleBackColor = false;
             this.btnFermer.Click += new System.EventHandler(this.btnFermer_Click);
             // 
             // lblRienATrraiter
@@ -138,7 +138,7 @@ namespace AP3_FormaFlix
             // 
             // btnListeComm
             // 
-            this.btnListeComm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListeComm.BackColor = System.Drawing.Color.Black;
             this.btnListeComm.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListeComm.ForeColor = System.Drawing.Color.White;
             this.btnListeComm.Location = new System.Drawing.Point(12, 12);
@@ -146,7 +146,7 @@ namespace AP3_FormaFlix
             this.btnListeComm.Size = new System.Drawing.Size(115, 67);
             this.btnListeComm.TabIndex = 27;
             this.btnListeComm.Text = "liste des commentaires";
-            this.btnListeComm.UseVisualStyleBackColor = true;
+            this.btnListeComm.UseVisualStyleBackColor = false;
             this.btnListeComm.Click += new System.EventHandler(this.btnListeComm_Click);
             // 
             // FormGestionCommentaire

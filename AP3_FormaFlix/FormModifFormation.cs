@@ -10,13 +10,14 @@ using System.Windows.Forms;
 
 namespace AP3_FormaFlix
 {
-    public partial class FormModifFormation : Form
+    public partial class FormModifFormation : Corner
     {
         private int index;
 
         public FormModifFormation(int index)
         {
             InitializeComponent();
+            this.roundedCorner();
             this.index = index;
         }
 

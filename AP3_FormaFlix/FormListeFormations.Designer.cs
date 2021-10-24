@@ -36,14 +36,10 @@
             this.listeDesCompétencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.btnFermer = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbCompetences = new System.Windows.Forms.ListBox();
-            this.gbCompetences = new System.Windows.Forms.GroupBox();
             this.btnsuppforma = new System.Windows.Forms.Button();
             this.btnModifForma = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFormations)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
-            this.gbCompetences.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvFormations
@@ -62,17 +58,15 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvFormations.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvFormations.Location = new System.Drawing.Point(39, 53);
+            this.dgvFormations.Location = new System.Drawing.Point(39, 48);
             this.dgvFormations.MultiSelect = false;
             this.dgvFormations.Name = "dgvFormations";
             this.dgvFormations.ReadOnly = true;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvFormations.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFormations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFormations.Size = new System.Drawing.Size(555, 150);
+            this.dgvFormations.Size = new System.Drawing.Size(806, 192);
             this.dgvFormations.TabIndex = 0;
-            this.dgvFormations.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvFormations_CellMouseClick);
-            this.dgvFormations.SelectionChanged += new System.EventHandler(this.DgvFormations_SelectionChanged);
             // 
             // contextMenuStrip1
             // 
@@ -104,7 +98,7 @@
             this.btnFermer.BackColor = System.Drawing.Color.Black;
             this.btnFermer.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFermer.ForeColor = System.Drawing.Color.White;
-            this.btnFermer.Location = new System.Drawing.Point(512, 209);
+            this.btnFermer.Location = new System.Drawing.Point(450, 260);
             this.btnFermer.Name = "btnFermer";
             this.btnFermer.Size = new System.Drawing.Size(82, 39);
             this.btnFermer.TabIndex = 2;
@@ -112,49 +106,12 @@
             this.btnFermer.UseVisualStyleBackColor = false;
             this.btnFermer.Click += new System.EventHandler(this.BtnFermer_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(46, 279);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(400, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Faire click droit sur une formation pour lister ses compétences";
-            // 
-            // lbCompetences
-            // 
-            this.lbCompetences.BackColor = System.Drawing.Color.White;
-            this.lbCompetences.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCompetences.FormattingEnabled = true;
-            this.lbCompetences.ItemHeight = 16;
-            this.lbCompetences.Location = new System.Drawing.Point(16, 19);
-            this.lbCompetences.Name = "lbCompetences";
-            this.lbCompetences.Size = new System.Drawing.Size(163, 116);
-            this.lbCompetences.TabIndex = 5;
-            // 
-            // gbCompetences
-            // 
-            this.gbCompetences.BackColor = System.Drawing.Color.Transparent;
-            this.gbCompetences.Controls.Add(this.lbCompetences);
-            this.gbCompetences.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbCompetences.ForeColor = System.Drawing.Color.Red;
-            this.gbCompetences.Location = new System.Drawing.Point(639, 53);
-            this.gbCompetences.Name = "gbCompetences";
-            this.gbCompetences.Size = new System.Drawing.Size(200, 150);
-            this.gbCompetences.TabIndex = 7;
-            this.gbCompetences.TabStop = false;
-            this.gbCompetences.Text = "Liste des compétences";
-            this.gbCompetences.Visible = false;
-            // 
             // btnsuppforma
             // 
             this.btnsuppforma.BackColor = System.Drawing.Color.Black;
             this.btnsuppforma.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsuppforma.ForeColor = System.Drawing.Color.White;
-            this.btnsuppforma.Location = new System.Drawing.Point(374, 209);
+            this.btnsuppforma.Location = new System.Drawing.Point(312, 260);
             this.btnsuppforma.Name = "btnsuppforma";
             this.btnsuppforma.Size = new System.Drawing.Size(113, 39);
             this.btnsuppforma.TabIndex = 8;
@@ -168,7 +125,7 @@
             this.btnModifForma.BackColor = System.Drawing.Color.Black;
             this.btnModifForma.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModifForma.ForeColor = System.Drawing.Color.White;
-            this.btnModifForma.Location = new System.Drawing.Point(374, 209);
+            this.btnModifForma.Location = new System.Drawing.Point(312, 260);
             this.btnModifForma.Name = "btnModifForma";
             this.btnModifForma.Size = new System.Drawing.Size(113, 39);
             this.btnModifForma.TabIndex = 9;
@@ -187,8 +144,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.btnModifForma);
             this.Controls.Add(this.btnsuppforma);
-            this.Controls.Add(this.gbCompetences);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvFormations);
@@ -200,7 +155,6 @@
             this.Load += new System.EventHandler(this.FormListeFormations_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFormations)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
-            this.gbCompetences.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,9 +167,6 @@
         private System.Windows.Forms.Button btnFermer;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem listeDesCompétencesToolStripMenuItem;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox lbCompetences;
-        private System.Windows.Forms.GroupBox gbCompetences;
         private System.Windows.Forms.Button btnsuppforma;
         private System.Windows.Forms.Button btnModifForma;
     }

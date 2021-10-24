@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AP3_FormaFlix
@@ -15,12 +8,13 @@ namespace AP3_FormaFlix
     /// Auteur : C.AUTRET
     /// date : Septembre 2021
     /// </summary>
-    public partial class FormListeFormations : Form
+    public partial class FormListeFormations : Corner
     {
         private BindingSource bS1;
         public FormListeFormations()
         {
             InitializeComponent();
+            this.roundedCorner();
         }
         public FormListeFormations(string Maj)
         {
@@ -81,36 +75,12 @@ namespace AP3_FormaFlix
             {
                 // on récupère l'identifiant de la formation sélectionnée
                 int idF = Convert.ToInt32(dgvFormations.Rows[dgvFormations.SelectedRows[0].Index].Cells[0].Value);
-
-                // on récupère les compétences liées à la fortmation sélectionnée dans DT[2]
-                Controleur.VmodeleF.charger_CompetencesSelonFormation(idF);
-                if (Controleur.VmodeleC.Chargement)
-                {
-                    gbCompetences.Visible = true;
-                    lbCompetences.Items.Clear();
-                    if (Controleur.VmodeleC.DT[2].Rows.Count == 0)
-                    {
-                        lbCompetences.Items.Add("Pas de compétences associées");
-                    }
-                    else
-                    {
-                        // si des compétences existent pour cette formation, on les ajoute dans la listBox
-                        for (int i = 0; i < Controleur.VmodeleC.DT[2].Rows.Count; i++)
-                        {
-                            lbCompetences.Items.Add(Controleur.VmodeleC.DT[2].Rows[i]["LIBELLECOMPETENCE"].ToString());
-                        }
-                    }
-                }
             }
             else
                 MessageBox.Show("Il faut sélectionner une ligne");
         }
 
 
-        private void DgvFormations_SelectionChanged(object sender, EventArgs e)
-        {
-            gbCompetences.Visible = false;
-        }
 
         private void btnsuppforma_Click(object sender, EventArgs e)
         {
@@ -131,14 +101,6 @@ namespace AP3_FormaFlix
         {
             FormModifFormation FM = new FormModifFormation(Convert.ToInt32(dgvFormations.CurrentRow.Index));
             FM.Show();
-        }
-
-        private void dgvFormations_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                gbCompetences.Visible = true;
-            }
         }
     }
 }

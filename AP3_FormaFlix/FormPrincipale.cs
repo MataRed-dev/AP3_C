@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AP3_FormaFlix
@@ -15,14 +8,12 @@ namespace AP3_FormaFlix
     /// Auteur : C.AUTRET
     /// date : Septembre 2021
     /// </summary>
-    public partial class FormPrincipale : Form
+    public partial class FormPrincipale : Corner
     {
-        private string admin;
         public FormPrincipale(string admin)
         {
             InitializeComponent();
-            this.admin = admin;
-            this.Text = "FORMA'FLIX : " + admin;
+            this.roundedCorner();
         }
 
         private void QuitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -46,8 +37,10 @@ namespace AP3_FormaFlix
 
         private void FormPrincipale_Load(object sender, EventArgs e)
         {
-            gestionDesFormationsToolStripMenuItem.Enabled = true;
-
+            if (Convert.ToInt32(Controleur.VmodeleC.DT[0].Rows[5]) == 1 )
+                ajouterUtilisateurToolStripMenuItem.Visible =true;
+            else
+                ajouterUtilisateurToolStripMenuItem.Visible =false;
         }
 
         private void ListerToutesLesFormationsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,6 +84,14 @@ namespace AP3_FormaFlix
         private void supprimerUneFormationToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+            this.Hide();
+            FormListeFormations FF = new FormListeFormations("supprimer");
+            FF.Closed += (s, args) => this.Close();
+            FF.Show();
+        }
+
+        private void ajouterUtilisateurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             this.Hide();
             FormListeFormations FF = new FormListeFormations("supprimer");
             FF.Closed += (s, args) => this.Close();

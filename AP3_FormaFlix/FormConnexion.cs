@@ -15,11 +15,14 @@ namespace AP3_FormaFlix
     /// Auteur : C.AUTRET
     /// date : Septembre 2021
     /// </summary>
-    public partial class FormConnexion : Form
+    public partial class FormConnexion : Corner
     {
+        
+
         public FormConnexion()
         {
             InitializeComponent();
+            this.roundedCorner();
         }        
 
         private void FormConnexion_Load(object sender, EventArgs e)

@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,8 +48,7 @@ namespace AP3_FormaFlix
                 dT.Add(new DataTable());
             }
         }
-
-
+        
         /// <summary>
         /// Méthode pour se connecter à la BD
         /// </summary>

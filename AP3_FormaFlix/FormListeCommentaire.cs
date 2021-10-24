@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace AP3_FormaFlix
 {
-    public partial class FormListeCommentaire : Form
+    public partial class FormListeCommentaire : Corner
     {
         public FormListeCommentaire()
         {
             InitializeComponent();
+            this.roundedCorner();
         }
 
         private void FormListeCommentaire_Load(object sender, EventArgs e)

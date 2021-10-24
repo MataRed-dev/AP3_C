@@ -15,11 +15,12 @@ namespace AP3_FormaFlix
     /// Auteur : C.AUTRET
     /// date : Septembre 2021
     /// </summary>
-    public partial class FormAjoutFormation : Form
+    public partial class FormAjoutFormation : Corner
     {
         public FormAjoutFormation()
         {
             InitializeComponent();
+            this.roundedCorner();
         }
 
         private void BtnFermer_Click(object sender, EventArgs e)

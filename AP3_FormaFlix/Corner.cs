@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
 namespace AP3_FormaFlix
-{
-    interface Corner 
+{ 
+    public class Corner : Form
     {
         // The enum flag for DwmSetWindowAttribute's second parameter, which tells the function what attribute to set.
         public enum DWMWINDOWATTRIBUTE
@@ -25,16 +26,14 @@ namespace AP3_FormaFlix
             DWMWCP_ROUNDSMALL = 3
         }
 
-        // Import dwmapi.dll and define DwmSetWindowAttribute in C# corresponding to the native function.
-        [DllImport("dwmapi.dll", CharSet = CharSet.Unicode, SetLastError = true)]
-        private static extern long DwmSetWindowAttribute(IntPtr hwnd,
-                                                         DWMWINDOWATTRIBUTE attribute,
-                                                         ref DWM_WINDOW_CORNER_PREFERENCE pvAttribute,
-                                                         uint cbAttribute);
-
         // ...
         // Various other definitions
         // ...
+
+        // Import dwmapi.dll and define DwmSetWindowAttribute in C# corresponding to the native function.
+        [DllImport("dwmapi.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+        private static extern long DwmSetWindowAttribute(IntPtr hwnd, DWMWINDOWATTRIBUTE attribute, ref DWM_WINDOW_CORNER_PREFERENCE pvAttribute, uint cbAttribute);
+
 
         public void roundedCorner()
         {

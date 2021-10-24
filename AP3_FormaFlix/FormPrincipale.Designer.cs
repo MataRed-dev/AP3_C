@@ -33,6 +33,7 @@
             this.connexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reconnecterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterUtilisateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDesFormationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listerToutesLesFormationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterUneFormationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,7 +64,8 @@
             this.connexionToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.connexionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deconnexionToolStripMenuItem,
-            this.reconnecterToolStripMenuItem});
+            this.reconnecterToolStripMenuItem,
+            this.ajouterUtilisateurToolStripMenuItem});
             this.connexionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.connexionToolStripMenuItem.Name = "connexionToolStripMenuItem";
             this.connexionToolStripMenuItem.Size = new System.Drawing.Size(152, 20);
@@ -74,7 +76,7 @@
             this.deconnexionToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.deconnexionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.deconnexionToolStripMenuItem.Name = "deconnexionToolStripMenuItem";
-            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deconnexionToolStripMenuItem.Text = "Deconnexion";
             this.deconnexionToolStripMenuItem.Click += new System.EventHandler(this.DeconnexionToolStripMenuItem_Click);
             // 
@@ -83,9 +85,19 @@
             this.reconnecterToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.reconnecterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.reconnecterToolStripMenuItem.Name = "reconnecterToolStripMenuItem";
-            this.reconnecterToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.reconnecterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reconnecterToolStripMenuItem.Text = "Reconnecter";
             this.reconnecterToolStripMenuItem.Click += new System.EventHandler(this.ReconnecterToolStripMenuItem_Click);
+            // 
+            // ajouterUtilisateurToolStripMenuItem
+            // 
+            this.ajouterUtilisateurToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.ajouterUtilisateurToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.ajouterUtilisateurToolStripMenuItem.Name = "ajouterUtilisateurToolStripMenuItem";
+            this.ajouterUtilisateurToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajouterUtilisateurToolStripMenuItem.Text = "Ajouter Utilisateur";
+            this.ajouterUtilisateurToolStripMenuItem.Visible = false;
+            this.ajouterUtilisateurToolStripMenuItem.Click += new System.EventHandler(this.ajouterUtilisateurToolStripMenuItem_Click);
             // 
             // gestionDesFormationsToolStripMenuItem
             // 
@@ -187,6 +199,7 @@
         private System.Windows.Forms.ToolStripMenuItem gestionDesCommentairesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modiferUneFormationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supprimerUneFormationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterUtilisateurToolStripMenuItem;
     }
 }
 

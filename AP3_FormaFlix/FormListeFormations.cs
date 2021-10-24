@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AP3_FormaFlix
@@ -15,12 +8,13 @@ namespace AP3_FormaFlix
     /// Auteur : C.AUTRET
     /// date : Septembre 2021
     /// </summary>
-    public partial class FormListeFormations : Form
+    public partial class FormListeFormations : Corner
     {
         private BindingSource bS1;
         public FormListeFormations()
         {
             InitializeComponent();
+            this.roundedCorner();
         }
         public FormListeFormations(string Maj)
         {

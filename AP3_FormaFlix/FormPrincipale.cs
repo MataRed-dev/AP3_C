@@ -37,7 +37,7 @@ namespace AP3_FormaFlix
 
         private void FormPrincipale_Load(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(Controleur.VmodeleC.DT[0].Rows[5]) == 1 )
+            if (Convert.ToInt32(Controleur.VmodeleC.DT[0].Rows[0][5]) == 1 )
                 ajouterUtilisateurToolStripMenuItem.Visible =true;
             else
                 ajouterUtilisateurToolStripMenuItem.Visible =false;
@@ -93,9 +93,9 @@ namespace AP3_FormaFlix
         private void ajouterUtilisateurToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormListeFormations FF = new FormListeFormations("supprimer");
-            FF.Closed += (s, args) => this.Close();
-            FF.Show();
+            FormAjoutUser FASU = new FormAjoutUser();
+            FASU.Closed += (s, args) => this.Close();
+            FASU.Show();
         }
     }
 }

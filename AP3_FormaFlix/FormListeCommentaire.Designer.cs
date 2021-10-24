@@ -44,7 +44,8 @@
             // 
             // btnListeComm
             // 
-            this.btnListeComm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListeComm.BackColor = System.Drawing.Color.Black;
+            this.btnListeComm.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnListeComm.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListeComm.ForeColor = System.Drawing.Color.White;
             this.btnListeComm.Location = new System.Drawing.Point(12, 12);
@@ -52,7 +53,7 @@
             this.btnListeComm.Size = new System.Drawing.Size(115, 67);
             this.btnListeComm.TabIndex = 28;
             this.btnListeComm.Text = "traiter  commentaires";
-            this.btnListeComm.UseVisualStyleBackColor = true;
+            this.btnListeComm.UseVisualStyleBackColor = false;
             this.btnListeComm.Click += new System.EventHandler(this.btnListeComm_Click);
             // 
             // label8
@@ -143,7 +144,7 @@
             // 
             // btnFermer
             // 
-            this.btnFermer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFermer.BackColor = System.Drawing.Color.Black;
             this.btnFermer.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFermer.ForeColor = System.Drawing.Color.White;
             this.btnFermer.Location = new System.Drawing.Point(861, 12);
@@ -151,7 +152,7 @@
             this.btnFermer.Size = new System.Drawing.Size(134, 47);
             this.btnFermer.TabIndex = 36;
             this.btnFermer.Text = "FERMER";
-            this.btnFermer.UseVisualStyleBackColor = true;
+            this.btnFermer.UseVisualStyleBackColor = false;
             this.btnFermer.Click += new System.EventHandler(this.btnFermer_Click);
             // 
             // FormListeCommentaire

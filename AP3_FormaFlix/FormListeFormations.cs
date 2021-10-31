@@ -51,8 +51,8 @@ namespace AP3_FormaFlix
                     dgvFormations.Refresh();
                     dgvFormations.Visible = true;
                 }
-
             }
+
         }
 
         private void BtnFermer_Click(object sender, EventArgs e)

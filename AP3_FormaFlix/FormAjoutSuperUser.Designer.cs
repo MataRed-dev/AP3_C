@@ -182,7 +182,6 @@
             // help
             // 
             this.help.BackColor = System.Drawing.Color.Black;
-            this.help.Enabled = false;
             this.help.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.help.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.help.ForeColor = System.Drawing.Color.White;

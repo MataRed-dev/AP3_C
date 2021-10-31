@@ -142,11 +142,11 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(880, 311);
             this.ControlBox = false;
-            this.Controls.Add(this.btnModifForma);
             this.Controls.Add(this.btnsuppforma);
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvFormations);
+            this.Controls.Add(this.btnModifForma);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormListeFormations";

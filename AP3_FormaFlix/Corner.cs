@@ -31,7 +31,7 @@ namespace AP3_FormaFlix
         // ...
 
         // Import dwmapi.dll and define DwmSetWindowAttribute in C# corresponding to the native function.
-        [DllImport("dwmapi.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+        [DllImport("dwmapi.dll", SetLastError = true)]
         private static extern long DwmSetWindowAttribute(IntPtr hwnd, DWMWINDOWATTRIBUTE attribute, ref DWM_WINDOW_CORNER_PREFERENCE pvAttribute, uint cbAttribute);
 
 

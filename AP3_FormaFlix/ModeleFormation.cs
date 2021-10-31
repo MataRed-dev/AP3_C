@@ -20,6 +20,7 @@ namespace AP3_FormaFlix
         /// </summary>
         public void charger_Formations()
         {
+
             Controleur.VmodeleC.charger("select IDFORMATION, LIBELLE, DESCRIPTION, IDENTIFIANTVIDEO, VISIBILITEPUBLIC, DATEVISIBILITE, IMAGE from formation;", Controleur.VmodeleC.DT[1]);
         }
 

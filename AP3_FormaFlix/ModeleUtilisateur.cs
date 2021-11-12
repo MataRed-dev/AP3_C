@@ -58,7 +58,7 @@ namespace AP3_FormaFlix
                 if (ouiNon)
                     command.Parameters.AddWithValue("super", 1);
                 else
-                    command.Parameters.AddWithValue("super", null);
+                    command.Parameters.AddWithValue("super", 0);
                 // Exécution de la requête
                 int i = command.ExecuteNonQuery();
 

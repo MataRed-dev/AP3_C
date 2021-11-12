@@ -4,6 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using iText.Kernel.Pdf;
+using iText.Kernel.Pdf.Canvas.Draw;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
+
 namespace AP3_FormaFlix
 {
     static class Program
@@ -17,6 +23,30 @@ namespace AP3_FormaFlix
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormConnexion());
+        }
+
+        static void MainA(string[] args)
+        {
+            // Must have write permissions to the path folder
+            PdfWriter writer = new PdfWriter("C:\\Users\\gouda\\OneDrive\\Documents\\AP3\\AP3_C\\demo.pdf");
+            PdfDocument pdf = new PdfDocument(writer);
+            Document document = new Document(pdf);
+            Paragraph header = new Paragraph("CERTICAT DE SUIVI DE FORMATION")
+               .SetTextAlignment(TextAlignment.CENTER)
+               .SetFontSize(20);
+
+            document.Add(header);
+            Paragraph subheader = new Paragraph("Certification provenant de FORMAFLIX")
+                .SetTextAlignment(TextAlignment.CENTER)
+                .SetFontSize(15);
+            Paragraph presentation = new Paragraph("Ce certificat a été délivré par l'entreprise BG'S COORP")
+                .SetFontSize(10)
+                .SetTextAlignment(TextAlignment.LEFT);
+            LineSeparator ls = new LineSeparator(lineDrawer: new SolidLine());
+            document.Add(ls);
+            document.Add(subheader);
+            document.Add(presentation);
+            document.Close();
         }
     }
 }

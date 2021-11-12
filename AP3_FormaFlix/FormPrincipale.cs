@@ -65,6 +65,7 @@ namespace AP3_FormaFlix
             FormAjoutFormation FA = new FormAjoutFormation();
             FA.Closed += (s, args) => this.Close();
             FA.Show();
+            MessageBox.Show("Zizi");
         }
 
         private void gestionDesCommentairesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,7 +86,6 @@ namespace AP3_FormaFlix
 
         private void supprimerUneFormationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             this.Hide();
             FormListeFormations FF = new FormListeFormations("supprimer");
             FF.Closed += (s, args) => this.Close();
@@ -102,7 +102,6 @@ namespace AP3_FormaFlix
 
         private void deconnexionToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
             this.Hide();
             FormConnexion FC = new FormConnexion();
             FC.Closed += (s, args) => this.Close();

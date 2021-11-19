@@ -95,32 +95,37 @@ namespace AP3_FormaFlix
             // vérifier que le libellé et le lien video sont renseignés au minimum
             if (tbLibelle.Text != "" && tbVideo.Text != "")
             {
-                // enregistrement de la question en lien avec le thème et niveau
-                if (Controleur.VmodeleF.AjoutFormation(tbLibelle.Text, tbDescription.Text, tbVideo.Text, tbImage.Text, cbVisible.Checked, dtpdatepublication.Value, Convert.ToInt32(Controleur.VmodeleC.DT[0].Rows[0][0])))
+                if (Uri.IsWellFormedUriString(tbImage.Text, UriKind.Absolute))
                 {
-                    // recupérer l'IDFORMATION 
-                    // récupération de la dernière formation ajoutée pour avoir son id
-                    Controleur.VmodeleF.charger_Formations();
-                    int idF = Convert.ToInt32(Controleur.VmodeleC.DT[1].Rows[Controleur.VmodeleC.DT[1].Rows.Count - 1]["IDFORMATION"]);
-                    MessageBox.Show("Formation ajoutée n° " + idF);
-
-                    // parcourir lbCompetence
-                    // récuperer l'IDCOMPETENCE pour chaque compétence à ajouter
-                    int idC =0;
-                    for (int i=0; i<lbCompetences.Items.Count; i++)
+                    // enregistrement de la question en lien avec le thème et niveau
+                    if (Controleur.VmodeleF.AjoutFormation(tbLibelle.Text, tbDescription.Text, tbVideo.Text, tbImage.Text, cbVisible.Checked, dtpdatepublication.Value, Convert.ToInt32(Controleur.VmodeleC.DT[0].Rows[0][0])))
                     {
-                        Controleur.VmodeleF.charger_CompetenceSelonLibelle(lbCompetences.Items[i].ToString());
-                        if (Controleur.VmodeleC.DT[4].Rows.Count != 0)
+                        // recupérer l'IDFORMATION 
+                        // récupération de la dernière formation ajoutée pour avoir son id
+                        Controleur.VmodeleF.charger_Formations();
+                        int idF = Convert.ToInt32(Controleur.VmodeleC.DT[1].Rows[Controleur.VmodeleC.DT[1].Rows.Count - 1]["IDFORMATION"]);
+                        MessageBox.Show("Formation ajoutée n° " + idF);
+
+                        // parcourir lbCompetence
+                        // récuperer l'IDCOMPETENCE pour chaque compétence à ajouter
+                        int idC = 0;
+                        for (int i = 0; i < lbCompetences.Items.Count; i++)
                         {
-                            idC = Convert.ToInt32(Controleur.VmodeleC.DT[4].Rows[0]["IDCOMPETENCE"]);
-                            // ajouter dans la table DEVELOPPER les compétences pour la formation
-                            Controleur.VmodeleF.AjoutDevelopper(idF, idC);
+                            Controleur.VmodeleF.charger_CompetenceSelonLibelle(lbCompetences.Items[i].ToString());
+                            if (Controleur.VmodeleC.DT[4].Rows.Count != 0)
+                            {
+                                idC = Convert.ToInt32(Controleur.VmodeleC.DT[4].Rows[0]["IDCOMPETENCE"]);
+                                // ajouter dans la table DEVELOPPER les compétences pour la formation
+                                Controleur.VmodeleF.AjoutDevelopper(idF, idC);
+                            }
+
                         }
 
+                        BtnAnnuler_Click(sender, e);
                     }
-
-                    BtnAnnuler_Click(sender, e);
                 }
+                else
+                    tbImage.Text = "";
             }
             else
             {

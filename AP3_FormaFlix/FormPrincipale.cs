@@ -10,10 +10,12 @@ namespace AP3_FormaFlix
     /// </summary>
     public partial class FormPrincipale : Corner
     {
+        string admin;
         public FormPrincipale(string admin)
         {
             InitializeComponent();
             this.roundedCorner();
+            this.admin = admin;
         }
 
         private void QuitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -39,6 +41,7 @@ namespace AP3_FormaFlix
 
         private void FormPrincipale_Load(object sender, EventArgs e)
         {
+            user.Text = admin;
             if (Convert.ToInt32(Controleur.VmodeleC.DT[0].Rows[0][5]) == 1 )
                 ajouterUtilisateurToolStripMenuItem.Visible =true;
             else

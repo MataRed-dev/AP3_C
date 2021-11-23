@@ -8,13 +8,25 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		FORMAFLIX|Any CPU = FORMAFLIX|Any CPU
+		FORMAFLIX|x64 = FORMAFLIX|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FBAD4A78-F591-477E-9247-7885E074BC21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FBAD4A78-F591-477E-9247-7885E074BC21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBAD4A78-F591-477E-9247-7885E074BC21}.Debug|x64.ActiveCfg = Debug|x64
+		{FBAD4A78-F591-477E-9247-7885E074BC21}.Debug|x64.Build.0 = Debug|x64
+		{FBAD4A78-F591-477E-9247-7885E074BC21}.FORMAFLIX|Any CPU.ActiveCfg = FORMAFLIX|Any CPU
+		{FBAD4A78-F591-477E-9247-7885E074BC21}.FORMAFLIX|Any CPU.Build.0 = FORMAFLIX|Any CPU
+		{FBAD4A78-F591-477E-9247-7885E074BC21}.FORMAFLIX|x64.ActiveCfg = FORMAFLIX|x64
+		{FBAD4A78-F591-477E-9247-7885E074BC21}.FORMAFLIX|x64.Build.0 = FORMAFLIX|x64
 		{FBAD4A78-F591-477E-9247-7885E074BC21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBAD4A78-F591-477E-9247-7885E074BC21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBAD4A78-F591-477E-9247-7885E074BC21}.Release|x64.ActiveCfg = Release|x64
+		{FBAD4A78-F591-477E-9247-7885E074BC21}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

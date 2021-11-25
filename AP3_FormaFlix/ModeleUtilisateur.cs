@@ -13,11 +13,6 @@ namespace AP3_FormaFlix
     /// <summary>
     /// AP3 FORMA'FLIX : classe MODELECONNECTION pour la connexion à la BD 'ap"_bd_formaflix'
     /// Utilisateur d'une collection de DataTable
-    /// dT[0] : dateTable des utilisateurs
-    /// dT[1] : dataTable des formations
-    /// dT[2] : dataTable des competences selon une formation
-    /// dT[3] : dataTable des competences
-    /// dT[4] : dataTable des competences selon un libellé
     /// Auteur : M.GOUDAL
     /// date : Septembre 2021
     /// </summary>

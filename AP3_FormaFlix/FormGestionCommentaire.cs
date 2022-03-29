@@ -23,6 +23,7 @@ namespace AP3_FormaFlix
             Controleur.initFormation();
             Controleur.VmodeleF.charger_Commentaires();
 
+            label1.Visible = false;
             lblAuteur.Visible = false;
             lblRienATrraiter.Visible = false;
             tbCommentaire.Visible = false;
@@ -34,6 +35,7 @@ namespace AP3_FormaFlix
             }
             else
             {
+                label1.Visible = true; 
                 lblAuteur.Visible = true;
                 tbCommentaire.Visible = true;
                 lblAuteur.Text = Controleur.VmodeleC.DT[5].Rows[0][2].ToString() + " " + Controleur.VmodeleC.DT[5].Rows[0][3].ToString();

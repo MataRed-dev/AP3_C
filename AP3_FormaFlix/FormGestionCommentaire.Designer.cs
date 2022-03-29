@@ -74,6 +74,7 @@ namespace AP3_FormaFlix
             this.label1.Size = new System.Drawing.Size(63, 23);
             this.label1.TabIndex = 21;
             this.label1.Text = "AUTEUR :";
+            this.label1.Visible = false;
             // 
             // lblAuteur
             // 
